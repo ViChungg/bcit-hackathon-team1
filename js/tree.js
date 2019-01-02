@@ -8,4 +8,9 @@ baseTree.onload = function() {
 };
 baseTree.src = '../img/main-tree.svg';
 
-
+/* Adding leaves */
+var leaves = new Image();
+leaves.onload = function() {
+	ctx.drawImage(leaves, 0, 0);
+};
+leaves.src = '../img/leaves.svg';
