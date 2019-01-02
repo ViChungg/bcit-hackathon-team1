@@ -20,14 +20,14 @@
 
 	<div id="content">
 		<div id="logo"></div>
-		
+
 		<div id="main"></div>
 
 		<div id="nav">
 			
-			<button id="education" type="button">Education</button>
-			<button id="fitness" type="button">Fitness</button>
-			<button id="health" type="button">Health</button>
+			<button id="education" type="button" class="nav-buttons">Education</button>
+			<button id="fitness" type="button" class="nav-buttons">Fitness</button>
+			<button id="health" type="button" class="nav-buttons">Health</button>
 
 		</div>
 
@@ -43,6 +43,22 @@
 
 		<div id="task">
 			<h2>Tasks</h2>
+			<div class="task-list">
+				<table>
+					<thead>
+						<td>Task</td>
+						<td>Due Date</td>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Task 1</td>
+							<td>Jan 1</td>
+						</tr>
+
+						
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 	</div>
@@ -53,14 +69,12 @@
     <div class="content">
       <span id=closeeducation class="close">x</span>
       <h1>Education</h1>
-
-    <!-- <div class="content">
       <span class="close"></span>
       <input type=text class="input" id="dueDate" name=task placeholder="Task">
       <br/>
       <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
-    </div> -->
-
+    </div>
+      
   </div>
   
   <div id="fitnessPopup" class="popup">
