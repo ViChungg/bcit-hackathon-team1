@@ -6,9 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="../css/treeapp.css">
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Roboto');
-	</style>
 	
 </head>
 
@@ -18,17 +15,15 @@
 	</div>
 
 	<div id="content">
-		<div id="logo">
-			<img src="https://dummyimage.com/300x100/cccccc/fff&text=LOGO">
-		</div>
+		<div id="logo"></div>
 
 		<div id="main"></div>
 
 		<div id="nav">
 			
-			<button id="education" type="button">Education</button>
-			<button id="fitness" type="button">Fitness</button>
-			<button id="health" type="button">Health</button>
+			<button id="education" type="button" class="nav-buttons">Education</button>
+			<button id="fitness" type="button" class="nav-buttons">Fitness</button>
+			<button id="health" type="button" class="nav-buttons">Health</button>
 
 		</div>
 
@@ -44,18 +39,34 @@
 
 		<div id="task">
 			<h2>Tasks</h2>
+			<div class="task-list">
+				<table>
+					<thead>
+						<td>Task</td>
+						<td>Due Date</td>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Task 1</td>
+							<td>Jan 1</td>
+						</tr>
+
+						
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 	</div>
 
   <div id="popup1" class="popup">
 
-    <!-- <div class="content">
+    <div class="content">
       <span class="close"></span>
       <input type=text class="input" id="dueDate" name=task placeholder="Task">
       <br/>
       <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
-    </div> -->
+    </div>
 
   </div>
 

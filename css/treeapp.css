@@ -8,9 +8,8 @@ body {
     background-image: url("../img/background-darkblue.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'AirbnbCerealApp-Bold';
 }
-
 
 #content {
     width: 100%;
@@ -33,7 +32,6 @@ body {
     width: 20%;
     text-align: center;
     /*CHANGE FOR RESLOUTION OF SCREEN*/
-    padding-top: 80px;
 }
 
 /* CENTER TREE */
@@ -66,9 +64,13 @@ body {
 }
 
 
-
 #health {
     width: 90%;
     height: 60px;
     margin-bottom: 10px;
+}
+
+.nav-buttons {
+    background-color: none;
+    text-decoration: none;
 }
