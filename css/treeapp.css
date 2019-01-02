@@ -56,6 +56,18 @@ body {
     width: 30%;
 }
 
+table{
+	background-color: rgba(137, 141, 141, 0.56);
+	border-collapse: collapse;
+	border-radius: 5px;
+	border: none;
+	 width: 90%;
+}
+
+thead{
+	color: black;
+	background-color: rgba(95, 106, 96, 0.43);
+}
 /* BUTTONS */
 
 button {
