@@ -1,4 +1,16 @@
+@font-face {
+    font-family: 'AirbnbCerealApp-Bold';
+    src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+  }
+
 /* CSS for our app */
+body {
+    background-image: url("../img/background-darkblue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 #content {
     width: 100%;
