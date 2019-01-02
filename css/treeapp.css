@@ -10,9 +10,8 @@ body {
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
 	text-align: center;
+	font-family: 'AirbnbCerealApp-Bold';
 }
-
-
 
 
 #content {
@@ -32,27 +31,27 @@ body {
 /* NAV BAR */
 #nav {
     float: left;
-    background-color: blue;
     //background-color: blue;
     width: 20%;
     text-align: center;
     /*CHANGE FOR RESLOUTION OF SCREEN*/
-    padding-top: 80px;
 }
 
 /* CENTER TREE */
 #tree {
-    background-color: red;
     //background-color: red;
     width: 50%;
     margin: 0 auto;
     display: inline-block;
 }
 
+#myTree {
+    background-color: ;
+}
+
 /* TO-DO LIST */
 #task {
     float: right;
-    background-color: green;
     //background-color: green;
     width: 30%;
 }
@@ -81,9 +80,13 @@ button {
 }
 
 
-
 #health {
     width: 90%;
     height: 60px;
     margin-bottom: 10px;
+}
+
+.nav-buttons {
+    background-color: none;
+    text-decoration: none;
 }
