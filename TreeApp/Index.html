@@ -69,13 +69,15 @@
   <div id="educationPopup" class="popup">
 
 
-    <div class="content">
+    <div class="content is-hidden is-visuallyHidden">
       <span id=closeeducation class="close">x</span>
       <h1>Education</h1>
       <span class="close"></span>
-      <input type=text class="input" id="dueDate" name=task placeholder="Task">
+      <input type=text class="input" id="eduTask" name=task placeholder="Task">
       <br/>
-      <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+      <input type=date class="input" id="eduDate" name=dueDate value="2019-01-02">
+      <br/>
+      <input type=submit class="submitbutton" id="edusubmit" name="edusubmit">
     </div>
       
   </div>
@@ -85,9 +87,11 @@
   <div class="content">
     <span id=closefit class="close">x</span>
     <h1>Fitness</h1>
-    <input type=text class="input" id="dueDate" name=task placeholder="Task">
+    <input type=text class="input" id="fitTask" name=task placeholder="Task">
     <br/>
-    <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+    <input type=date class="input" id="fitDate" name=dueDate value="2019-01-02">
+    <br/>
+    <input type=submit class="submitbutton" id="fitsubmit" name="fitsubmit">
   </div>
 
   </div>
@@ -97,9 +101,11 @@
     <div class="content">
       <span id=closehealth class="close">x</span>
       <h1>Health</h1>
-      <input type=text class="input" id="dueDate" name=task placeholder="Task">
+      <input type=text class="input" id="healthTask" name=task placeholder="Task">
       <br/>
-      <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+      <input type=date class="input" id="healthDate" name=dueDate value="2019-01-02">
+      <br/>
+      <input type=submit class="submitbutton" id="healthsubmit" name="healthsubmit">
     </div>
 
   </div>
