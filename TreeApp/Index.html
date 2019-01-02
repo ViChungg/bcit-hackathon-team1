@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Tree App</title>
+	<title>Growth</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="../css/treeapp.css">
@@ -21,11 +21,11 @@
 	<div id="header"></div>
 
 	<div id="content">
-		<div id="logo"></div>
 
 		<div id="main"></div>
 
 		<div id="nav">
+			<div id="logo"><h1>Growth</h1></div>
 			
 			<button id="education" type="button" class="nav-buttons">Education</button>
 			<button id="fitness" type="button" class="nav-buttons">Fitness</button>
@@ -48,15 +48,17 @@
 			<div class="task-list">
 				<table>
 					<thead>
-						<td>Task</td>
-						<td>Due Date</td>
-						<td>Status</td>
+
+						<td class="td-task">Task</td>
+						<td class="td-date">Due Date</td>
+						<td class="td-type">Type</td>
+
 					</thead>
-					<tbody>
+					<tbody id="table-body">
 						<tr>
 							<td>Task 1</td>
 							<td>Jan 1</td>
-							<td>Complete</td>
+							<td>type</td>
 						</tr>
 
 						
@@ -70,13 +72,17 @@
   <div id="educationPopup" class="popup">
 
 
-    <div class="content is-hidden is-visuallyHidden">
+    <div class="content">
       <span id=closeeducation class="close">x</span>
       <h1>Education</h1>
       <span class="close"></span>
       <input type=text class="input" id="eduTask" name="task" placeholder="Task">
       <br/>
+<<<<<<< HEAD
       <input type=date class="input" id="eduDate" name="dueDate" value="2019-01-02">
+=======
+      <input type=date class="input" id="eduDate" name=dueDate placeholder="Due Date" value="2019-01-02">
+>>>>>>> 59e005bcc1493ce044061eb5659ddc2bb77b29fe
       <br/>
       <input type=submit class="submitbutton" id="edusubmit" name="edusubmit">
     </div>
@@ -111,8 +117,12 @@
 
   </div>
 </body>
+
+
+
 <script type="text/javascript" src="../js/popup.js"></script>
 <script type="text/javascript" src="../js/tree.js"></script>
+<script type="text/javascript" src="../js/table.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 <script>
