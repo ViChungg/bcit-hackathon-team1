@@ -12,33 +12,28 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Roboto');
 	</style>
-
 	
 </head>
 
 <body>
-	<div id="header">
-		<h1>Tree App</h1>
-	</div>
+	<div id="header"></div>
 
 	<div id="content">
-		<div id="logo">
-			<img src="https://dummyimage.com/300x100/cccccc/fff&text=LOGO">
-		</div>
+		<div id="logo"></div>
 
 		<div id="main"></div>
 
 		<div id="nav">
 			
-			<button id="education" type="button">Education</button>
-			<button id="fitness" type="button">Fitness</button>
-			<button id="health" type="button">Health</button>
+			<button id="education" type="button" class="nav-buttons">Education</button>
+			<button id="fitness" type="button" class="nav-buttons">Fitness</button>
+			<button id="health" type="button" class="nav-buttons">Health</button>
 
 		</div>
 
 
 		<div id="tree">
-			<img src="https://dummyimage.com/600x400/000/fff">
+			<canvas id="myTree" width="600px" height="600px"></canvas>
 
 			<div id="counter">
 				<h3>Points</h3>
@@ -48,6 +43,22 @@
 
 		<div id="task">
 			<h2>Tasks</h2>
+			<div class="task-list">
+				<table>
+					<thead>
+						<td>Task</td>
+						<td>Due Date</td>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Task 1</td>
+							<td>Jan 1</td>
+						</tr>
+
+						
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 	</div>
@@ -89,8 +100,7 @@
     </div>
 
   </div>
-
-
 </body>
 <script type="text/javascript" src="../js/popup.js"></script>
+<script type="text/javascript" src="../js/tree.js"></script>
 </html>
