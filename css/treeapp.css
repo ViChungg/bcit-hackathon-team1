@@ -1,4 +1,16 @@
+@font-face {
+    font-family: 'AirbnbCerealApp-Bold';
+    src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+  }
+
 /* CSS for our app */
+body {
+    background-image: url("../img/background-darkblue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 #content {
     width: 100%;
@@ -19,6 +31,9 @@
     float: left;
     background-color: blue;
     width: 20%;
+    text-align: center;
+    /*CHANGE FOR RESLOUTION OF SCREEN*/
+    padding-top: 80px;
 }
 
 /* CENTER TREE */
@@ -29,6 +44,10 @@
     display: inline-block;
 }
 
+#myTree {
+    background-color: white;
+}
+
 /* TO-DO LIST */
 #task {
     float: right;
@@ -37,17 +56,23 @@
 }
 
 /* BUTTONS */
-#fitness {
-    width: 50%;
-    height: 40px;
+#education {
+    width: 90%;
+    height: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-#education {
-    width: 50%;
-    height: 40px;
+#fitness {
+    width: 90%;
+    height: 60px;
+    margin-bottom: 10px;
 }
+
+
 
 #health {
-    width: 50%;
-    height: 40px;
+    width: 90%;
+    height: 60px;
+    margin-bottom: 10px;
 }
