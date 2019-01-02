@@ -4,6 +4,7 @@ var ctx = canvas.getContext('2d');
 
 /* Education leaves */
 var eduLeaves = new Image();
+
 var eduPoints = 3;
 eduLeaves.onload = function() {
 	if (eduPoints == 1) {
