@@ -5,6 +5,9 @@ $(document).ready(function () {
     //REFERENCE TO FIREBASE DATABASE
     var rootRef = firebase.database().ref();
 
+    //TABLE BODY
+    var table = document.getElementById("table-body");
+
     //TAKES USER ID FROM FIREBASE AUTHENTICATION
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -15,21 +18,60 @@ $(document).ready(function () {
     //BUILD TABLE
     rootRef.once("value").then(function (snapshot) {
         /* change when nodes are built" */
-        if (snapshot.child("users/" + userid).hasChild("______****")) {
+        if (snapshot.child("users/" + userid).hasChild("tasks")) {
 
-            var query = firebase.database().ref("users/" + userid + "_____****").orderByKey();
+            var query = firebase.database().ref("users/" + userid + "tasks").orderByKey();
 
             query.once("value").then(function (snapshot) {
 
                 snapshot.forEach(function (childSnapshot) {
-                    var task = childSnapshot.child("").val();
-                    var dueDate = childSnapshot.child("").val();
-                    var type = childSnapshot.child("").val();
-                    
-                    appendRow(task, dueDate, type);
+                    var task = childSnapshot.child("task").val();
+                    var dueDate = childSnapshot.child("date").val();
+                    var type = childSnapshot.child("type").val();
+                    var status = childSnapshot.child("status").val();
+
+                    if (status == false){
+                        appendRow(task, dueDate, type);
+                    } 
+
                 });
 
             });
         }
     });
+
+    function appendRow(val1, val2, val3) {
+        let task = val1;
+        let date = val2;
+        let type = val3;
+
+        /* TABLE ROW */
+        let tr = $("<tr></tr>");
+        $("tbody").append(tr);
+
+        /* TABLE DATA 1 */
+        let td1 = $("<td></td>");
+        td1.text(task);
+
+        /* TABLE DATA 2 */
+        let td2 = $("<td></td>");
+        td1.text(date);
+
+        /* TABLE DATA 3 */
+        let td3 = $("<td></td>");
+        
+        var icon;
+
+        if (type == 1){
+            icon = 1;
+        } else if (type == 2){
+            icon = 2;
+        } else if (type == 3){
+            icon = 3;
+        }
+        
+        td3.text(icon);
+
+        tr.append(td1, td2, td3);
+    }
 });
