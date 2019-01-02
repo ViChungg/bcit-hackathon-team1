@@ -81,3 +81,15 @@ body {
     background-color: none;
     text-decoration: none;
 }
+
+.td-task {
+    width: 70%;
+}
+
+.td-date {
+    width: 30%;
+}
+
+.td-type {
+    width: 15%;
+}
