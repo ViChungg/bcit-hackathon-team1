@@ -49,6 +49,8 @@ body {
 }
 
 #myTree {
+    margin: 0 auto;
+    background-color: transparent;
     width: 80%;
     margin: 0em 0em 0em 2.5em;
 }
@@ -110,4 +112,16 @@ button:hover {
 .nav-buttons {
     background-color: none;
     text-decoration: none;
+}
+
+.td-task {
+    width: 70%;
+}
+
+.td-date {
+    width: 30%;
+}
+
+.td-type {
+    width: 15%;
 }
