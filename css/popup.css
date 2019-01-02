@@ -1,3 +1,4 @@
+/*The main popup window*/
 .popup {
   position: fixed;
   z-index: 1;
@@ -8,6 +9,9 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
+  -webkit-transition: 0.5s;
+  transition: all 0.3s linear;
+  filter: blur(2px);
 }
 
 #educationPopup {
@@ -26,22 +30,28 @@
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
+  text-align: center;
+  border-radius: 10px;
 }
   
 .input {
-  margin: 0 auto;
+  margin: 5px;
+}
+
+.submitbutton {
+  
 }
 
 .close {
   color: black;
   float: right;
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: bold;
 }
 
 .close:hover, .close:focus {
-  color: black;
+  color: grey;
   cursor: pointer;
 }
