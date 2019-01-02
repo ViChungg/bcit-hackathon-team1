@@ -1,1 +1,0 @@
-/* Canvas to draw the tree */
