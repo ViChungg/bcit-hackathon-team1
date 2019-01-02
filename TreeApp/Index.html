@@ -7,7 +7,6 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/treeapp.css">
     <link rel="stylesheet" type="text/css" href="../css/popup.css">
-    <script type="text/javascript" src="../js/popup.js"></script>
 	
 </head>
 
@@ -47,10 +46,35 @@
 
 	</div>
 
-  <div id="popup1" class="popup">
+  <div id="educationPopup" class="popup">
 
     <div class="content">
-      <span class="close">x</span>
+      <span id=closeeducation class="close">x</span>
+      <h1>Education</h1>
+      <input type=text class="input" id="dueDate" name=task placeholder="Task">
+      <br/>
+      <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+    </div>
+
+  </div>
+  
+  <div id="fitnessPopup" class="popup">
+
+  <div class="content">
+    <span id=closefit class="close">x</span>
+    <h1>Fitness</h1>
+    <input type=text class="input" id="dueDate" name=task placeholder="Task">
+    <br/>
+    <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+  </div>
+
+  </div>
+  
+  <div id="healthPopup" class="popup">
+
+    <div class="content">
+      <span id=closehealth class="close">x</span>
+      <h1>Health</h1>
       <input type=text class="input" id="dueDate" name=task placeholder="Task">
       <br/>
       <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
@@ -60,5 +84,5 @@
 
 
 </body>
-
+<script type="text/javascript" src="../js/popup.js"></script>
 </html>

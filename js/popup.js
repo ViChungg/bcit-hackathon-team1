@@ -1,29 +1,56 @@
-var popup = document.getElementById('popup1');
+var edupopup = document.getElementById('educationPopup');
+var fitpopup = document.getElementById('fitnessPopup');
+var healthpopup = document.getElementById('healthPopup');
 
-var btn1 = document.getElementById("educationButton");
-var btn2 = document.getElementById("fitnessButton");
-var btn3 = document.getElementById("healthButton");
+var btn1 = document.getElementById("education");
+var btn2 = document.getElementById("fitness");
+var btn3 = document.getElementById("health");
 
-var span = document.getElementsByClassName("close")[0];
+var eduspan = document.getElementById("closeeducation");
+var fitspan = document.getElementById("closefit");
+var healthspan = document.getElementById("closehealth");
 
+/*Reveals the add task page*/
 btn1.onclick = function () {
-  popup.style.display = "block";
+  edupopup.style.display = "block";
 }
 
 btn2.onclick = function() {
-  popup.style.display = "block";
+  fitpopup.style.display = "block";
 }
 
 btn3.onclick = function() {
-  popup.style.display = "block";
+  healthpopup.style.display = "block";
 }
 
-span.onclick = function() {
-  popup.style.display = "none";
+/*Closes the task page*/
+eduspan.onclick = function() {
+  edupopup.style.display = "none";
+}
+
+fitspan.onclick = function() {
+  fitpopup.style.display = "none";
+}
+
+healthspan.onclick = function() {
+  healthpopup.style.display = "none";
+}
+
+/*Closes the task page when clicking outside window*/
+window.onclick = function(event) {
+  if (event.target == edupopup) {
+    edupopup.style.display = "none";
+  }
 }
 
 window.onclick = function(event) {
-  if (event.target == popup) {
-    popup.style.display = "none";
+  if (event.target == fitpopup) {
+    fitpopup.style.display = "none";
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == healthpopup) {
+    healthpopup.style.display = "none";
   }
 }
