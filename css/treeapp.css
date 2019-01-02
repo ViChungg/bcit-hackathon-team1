@@ -8,11 +8,17 @@ body {
     background-image: url("../img/background-darkblue.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'AirbnbCerealApp-Bold';
+    font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-family: 'AirbnbCerealApp-Bold';
 }
+
 
 #content {
     width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 /* LOGO */
@@ -27,34 +33,62 @@ body {
 
 /* NAV BAR */
 #nav {
-    float: left;
-    background-color: blue;
+    //background-color: blue;
     width: 20%;
+	min-width: 150px;
     text-align: center;
     /*CHANGE FOR RESLOUTION OF SCREEN*/
 }
 
 /* CENTER TREE */
 #tree {
-    background-color: white;
-    width: 50%;
-    margin: 0 auto;
+    //background-color: red;
+    width: 45%;
+	min-width: 300px;
     display: inline-block;
 }
 
 #myTree {
+    margin: 0 auto;
+    background-color: transparent;
     width: 80%;
     margin: 0em 0em 0em 2.5em;
 }
 
 /* TO-DO LIST */
 #task {
-    float: right;
-    background-color: green;
+    //background-color: green;
     width: 30%;
+	min-width: 186px;
 }
 
+table{
+	margin: auto;
+	background-color: rgba(137, 141, 141, 0.56);
+	border-collapse: collapse;
+	border-radius: 5px;
+	border: none;
+	 width: 90%;
+}
+
+thead{
+	color: black;
+	background-color: rgba(95, 106, 96, 0.43);
+}
 /* BUTTONS */
+
+button {
+	color: white;
+	border-radius: 5px;
+	background-color: #6d7578;
+	border:  none;
+	cursor: pointer;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+}
+
 #education {
     width: 90%;
     height: 60px;
@@ -78,4 +112,16 @@ body {
 .nav-buttons {
     background-color: none;
     text-decoration: none;
+}
+
+.td-task {
+    width: 70%;
+}
+
+.td-date {
+    width: 30%;
+}
+
+.td-type {
+    width: 15%;
 }
