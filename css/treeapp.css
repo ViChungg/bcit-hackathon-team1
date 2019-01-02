@@ -1,1 +1,32 @@
 /* CSS for our app */
+
+/* LOGO */
+#logo {
+    text-align: center;
+}
+
+/* MAIN BACKGROUND */
+#main {
+    background-color: yellow;
+}
+
+/* NAV BAR */
+#nav {
+    float: left;
+    background-color: blue;
+    width: 20%;
+}
+
+/* CENTER TREE */
+#tree {
+    float: right;
+    background-color: red;
+    width: 60%;
+}
+
+/* TO-DO LIST */
+#task {
+    float: right;
+    background-color: green;
+    width: 20%;
+}
