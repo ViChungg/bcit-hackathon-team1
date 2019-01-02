@@ -26,6 +26,10 @@ body {
     text-align: center;
 }
 
+#growthlogo {
+  width: 90%;
+}
+
 /* MAIN BACKGROUND */
 #main {
     background-color: yellow;
