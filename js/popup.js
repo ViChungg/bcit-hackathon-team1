@@ -6,6 +6,10 @@ var btn1 = document.getElementById("education");
 var btn2 = document.getElementById("fitness");
 var btn3 = document.getElementById("health");
 
+var edusubmit = document.getElementById("edusubmit");
+var fitsubmit = document.getElementById("fitsubmit");
+var healthsubmit = document.getElementById("healthsubmit");
+
 var eduspan = document.getElementById("closeeducation");
 var fitspan = document.getElementById("closefit");
 var healthspan = document.getElementById("closehealth");
@@ -33,6 +37,20 @@ fitspan.onclick = function() {
 }
 
 healthspan.onclick = function() {
+  healthpopup.style.display = "none";
+}
+
+/*Closes the task page when submitting*/
+
+edusubmit.onclick = function() {
+  edupopup.style.display = "none";
+}
+
+fitsubmit.onclick = function() {
+  fitpopup.style.display = "none";
+}
+
+healthsubmit.onclick = function() {
   healthpopup.style.display = "none";
 }
 
