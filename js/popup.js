@@ -52,31 +52,37 @@ healthspan.onclick = function() {
 
 edusubmit.onclick = function() {
   edupopup.style.display = "none";
+	containerElement.setAttribute('class', null);
 }
 
 fitsubmit.onclick = function() {
   fitpopup.style.display = "none";
+	containerElement.setAttribute('class', null);
 }
 
 healthsubmit.onclick = function() {
   healthpopup.style.display = "none";
+	containerElement.setAttribute('class', null);
 }
 
 /*Closes the task page when clicking outside window*/
 window.onclick = function(event) {
   if (event.target == edupopup) {
     edupopup.style.display = "none";
+	  containerElement.setAttribute('class', null);
   }
 }
 
 window.onclick = function(event) {
   if (event.target == fitpopup) {
     fitpopup.style.display = "none";
+	  containerElement.setAttribute('class', null);
   }
 }
 
 window.onclick = function(event) {
   if (event.target == healthpopup) {
     healthpopup.style.display = "none";
+	  containerElement.setAttribute('class', null);
   }
 }
