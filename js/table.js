@@ -24,8 +24,9 @@ $(document).ready(function () {
                 snapshot.forEach(function (childSnapshot) {
                     var task = childSnapshot.child("").val();
                     var dueDate = childSnapshot.child("").val();
+                    var type = childSnapshot.child("").val();
                     
-                    appendRow(task, dueDate);
+                    appendRow(task, dueDate, type);
                 });
 
             });
