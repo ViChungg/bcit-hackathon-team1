@@ -1,5 +1,9 @@
 /* CSS for our app */
 
+#content {
+    width: 100%;
+}
+
 /* LOGO */
 #logo {
     text-align: center;
@@ -19,14 +23,31 @@
 
 /* CENTER TREE */
 #tree {
-    float: right;
     background-color: red;
-    width: 60%;
+    width: 50%;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 /* TO-DO LIST */
 #task {
     float: right;
     background-color: green;
-    width: 20%;
+    width: 30%;
+}
+
+/* BUTTONS */
+#fitness {
+    width: 50%;
+    height: 40px;
+}
+
+#education {
+    width: 50%;
+    height: 40px;
+}
+
+#health {
+    width: 50%;
+    height: 40px;
 }
