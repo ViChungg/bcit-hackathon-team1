@@ -125,3 +125,6 @@ button:hover {
 .td-type {
     width: 15%;
 }
+
+.blur   {
+	filter: blur(5px);}

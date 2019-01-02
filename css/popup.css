@@ -1,14 +1,14 @@
 /*The main popup window*/
 .popup {
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(96, 96, 96, 0.2);
   -webkit-transition: 0.5s;
   transition: all 0.3s linear;
 }
