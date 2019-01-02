@@ -53,16 +53,59 @@ healthspan.onclick = function() {
 edusubmit.onclick = function() {
   edupopup.style.display = "none";
 	containerElement.setAttribute('class', null);
+  var eduEventName = $("#eduTask").val();
+  var eduDate = $("#eduDate").val();
+  
+  // userId firebase reference
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId + "/tasks").push({
+    "eduEventName": eduEventName,
+    "eduDate": eduDate,
+    "eduType": "1",
+    "eduStatus": false,
+  });
+
+  alert('success');
+
 }
 
 fitsubmit.onclick = function() {
   fitpopup.style.display = "none";
 	containerElement.setAttribute('class', null);
+
+  var fitEventName = $("#fitTask").val();
+  var fitDate = $("#fitDate").val();
+
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId + "/tasks").push({
+    "fitEventName": fitEventName,
+    "fitDate": fitDate,
+    "fitType": "2",
+    "fitStatus": false,
+  });
+
+  alert('success');
+
 }
 
 healthsubmit.onclick = function() {
   healthpopup.style.display = "none";
+
 	containerElement.setAttribute('class', null);
+
+  var healthEventName = $("#healthTask").val();
+  var healthDate = $("#healthDate").val();
+  
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId + "/tasks").push({
+    "eduEventName": healthEventName,
+    "eduDate": healthDate,
+    "eduType": "3",
+    "eduStatus": false,
+  });
+
+  alert('success');
+
 }
 
 /*Closes the task page when clicking outside window*/
