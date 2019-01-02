@@ -6,6 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="../css/treeapp.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto');
+	</style>
+
 	
 </head>
 
@@ -59,10 +66,37 @@
 
 	</div>
 
-  <div id="popup1" class="popup">
+  <div id="educationPopup" class="popup">
+
 
     <div class="content">
+      <span id=closeeducation class="close">x</span>
+      <h1>Education</h1>
       <span class="close"></span>
+      <input type=text class="input" id="dueDate" name=task placeholder="Task">
+      <br/>
+      <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+    </div>
+      
+  </div>
+  
+  <div id="fitnessPopup" class="popup">
+
+  <div class="content">
+    <span id=closefit class="close">x</span>
+    <h1>Fitness</h1>
+    <input type=text class="input" id="dueDate" name=task placeholder="Task">
+    <br/>
+    <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
+  </div>
+
+  </div>
+  
+  <div id="healthPopup" class="popup">
+
+    <div class="content">
+      <span id=closehealth class="close">x</span>
+      <h1>Health</h1>
       <input type=text class="input" id="dueDate" name=task placeholder="Task">
       <br/>
       <input type=text class="input" id="dueDate" name=dueDate placeholder="Due Date">
@@ -72,5 +106,5 @@
 
 
 </body>
-
+<script type="text/javascript" src="../js/popup.js"></script>
 </html>
