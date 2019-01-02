@@ -16,6 +16,9 @@ body {
 
 #content {
     width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 /* LOGO */
@@ -30,9 +33,9 @@ body {
 
 /* NAV BAR */
 #nav {
-    float: left;
     //background-color: blue;
     width: 20%;
+	min-width: 150px;
     text-align: center;
     /*CHANGE FOR RESLOUTION OF SCREEN*/
 }
@@ -40,9 +43,8 @@ body {
 /* CENTER TREE */
 #tree {
     //background-color: red;
-
-    width: 50%;
-    margin: 0 auto;
+    width: 45%;
+	min-width: 300px;
     display: inline-block;
 }
 
@@ -53,12 +55,13 @@ body {
 
 /* TO-DO LIST */
 #task {
-    float: right;
     //background-color: green;
     width: 30%;
+	min-width: 186px;
 }
 
 table{
+	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
 	border-collapse: collapse;
 	border-radius: 5px;
