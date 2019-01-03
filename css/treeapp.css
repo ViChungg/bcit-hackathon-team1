@@ -102,7 +102,7 @@ h2 {
 
 /* POINTS */
 #counter {
-    display: flex;
+    display: none;
     justify-content: space-around;
 }
 
@@ -327,3 +327,5 @@ tbody > tr:hover {
     0% { -webkit-filter: blur(15px); }
     100% { -webkit-filter: blur(0px); }
   }
+
+}
