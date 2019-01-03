@@ -194,9 +194,9 @@ $(document).ready(function(){
 });
 
 $(document).mouseup(function(event) {
-    var container = $("#completeTask");
+    var completewindow = $("#completeTask");
 
-    if (!container.is(event.target)) {
-        container.css("display", "none");
+    if (!completewindow.is(event.target)) {
+        completewindow.css("display", "none");
     }
 });
