@@ -64,7 +64,7 @@ $(document).ready(function () {
 
         /* TABLE ROW */
         let tr = $("<tr id='" + trkey + "'></tr>");
-        $("tbody").append(tr);
+        $("#table-body").append(tr);
 
         /* TABLE DATA 1 */
         let td1 = $("<td></td>");
@@ -94,12 +94,71 @@ $(document).ready(function () {
         tr.append(td1, td2, td3);
     }
 
-    $("tbody").on('click', 'tr', function () {
+    var taskWindow = false;
+  
+    $("tbody").on('click', 'tr', function() {
         var trID = $(this).attr('id');
 
-        $('.completeTask').css("display", "block");
+        taskWindow = true;        
+      
+        if (taskWindow) {
+          $('.completeTask').css("display", "block");
+        };
 
         $("#complete-button").click(function () {
+            var userId = firebase.auth().currentUser.uid;
+            var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
+            var eduRef = firebase.database().ref("users/" + userId + "/eduPoints");
+            var fitRef = firebase.database().ref("users/" + userId + "/fitPoints");
+            var healthRef = firebase.database().ref("users/" + userId + "/healthPoints");
+            var userRef = firebase.database().ref("users/" + userId);
+
+            taskRef.update({
+                "status": true,
+            })
+            $('.completeTask').css("display", "none");
+
+            taskRef.once("value").then(function (snapshot) {
+                var typePoints = parseInt(snapshot.child("type").val());
+                console.log(typePoints);
+                if (typePoints == 1) {
+                    eduRef.once('value').then(function(snap) {
+                        var ePoints = parseInt(snap.val());
+                        console.log(ePoints);
+                        ePoints++;
+                        console.log(ePoints);
+                        userRef.update({
+                            "eduPoints": ePoints
+                        })
+                    })
+                } else if (typePoints == 2) {
+                    fitRef.once('value').then(function(snap) {
+                        var fPoints = parseInt(snap.val());
+                        fPoints++;
+                        userRef.update({
+                            "fitPoints": fPoints
+                        })
+                    })
+                } else if (typePoints == 3) {
+                    healthRef.once('value').then(function(snap) {
+                        var hPoints = parseInt(snap.val());
+                        hPoints++;
+                        userRef.update({
+                            "healthPoints": hPoints
+                        })
+                    })
+                }
+            })
+
+            setTimeout(function(){location.reload()}, 900);
+
+        })
+      
+        $("#remove-button").click(function() {
+          $('.completeTask').css("display", "none");
+        });
+
+        $("#remove-button").click(function() {
             var userId = firebase.auth().currentUser.uid;
             var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
             taskRef.update({
@@ -116,11 +175,28 @@ $(document).ready(function () {
 
     });
 
-/*
 
+
+
+});
+
+$(document).ready(function(){
     function checkItems() {
-        if 
+        if (!document.getElementById("table-body").hasChildNodes()) {
+            console.log("hello");
+            $("#noItems").css("display", "block");
+        } else if (document.getElementById("table-body").hasChildNodes()) {
+            console.log("good");
+            $("#noItems").css("display", "none");
+        }
     }
     checkItems();
-*/
+});
+
+$(document).mouseup(function(event) {
+    var container = $("#completeTask");
+
+    if (!container.is(event.target)) {
+        container.css("display", "none");
+    }
 });
