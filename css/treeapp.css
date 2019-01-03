@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
 	text-align: center;
-	font-family: 'AirbnbCerealApp-Bold';
+    font-family: 'AirbnbCerealApp-Bold';
 }
 
 
@@ -37,7 +37,7 @@ body {
 
 /* NAV BAR */
 #nav {
-    //background-color: blue;
+    /* background-color: blue; */
     width: 20%;
 	min-width: 150px;
     text-align: center;
@@ -46,7 +46,7 @@ body {
 
 /* CENTER TREE */
 #tree {
-    //background-color: red;
+    /* background-color: red; */
     width: 45%;
 	min-width: 300px;
     display: inline-block;
@@ -61,7 +61,7 @@ body {
 
 /* TO-DO LIST */
 #task {
-    //background-color: green;
+    /* background-color: green; */
     width: 30%;
 	min-width: 186px;
 }
