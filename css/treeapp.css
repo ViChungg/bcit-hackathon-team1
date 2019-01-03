@@ -122,7 +122,7 @@ h2 {
   position: relative;
 	overflow: auto;
 	height: 88%;
-		margin-left: 20px;
+	margin-left: 20px;
 	margin-right: 20px;
 }
 
@@ -130,17 +130,20 @@ table{
 	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
 	border-collapse: collapse;
-	border-radius: 4px;
 	border: none;
     width: 90%;
     font-family: 'AirbnbCerealApp-Bold';
+
+    border-radius:6px;
+    -moz-border-radius:6px;
 }
 
 thead{
 	color: white;
 	font-weight: 800;
-	border: none;
-	background-color: rgba(0, 70, 6, 0.43);
+    border: none;
+    background-color: rgba(0, 70, 6, 0.43);
+    border-radius: 4px;
 }
 /* BUTTONS */
 
@@ -302,4 +305,3 @@ tbody > tr:hover {
 #remove-button{
     margin-left: 20px;
 }
-

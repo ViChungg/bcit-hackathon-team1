@@ -11,7 +11,6 @@ $(document).ready(function () {
     //MONTHS ARRAY
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-    
 
     //TAKES USER ID FROM FIREBASE AUTHENTICATION
     firebase.auth().onAuthStateChanged(function (user) {
@@ -24,7 +23,7 @@ $(document).ready(function () {
     rootRef.once("value").then(function (snapshot) {
         /* change when nodes are built" */
         if (snapshot.child("users/" + userid).hasChild("tasks")) {
-            
+
             var query = firebase.database().ref("users/" + userid + "/tasks");
 
 
@@ -46,7 +45,7 @@ $(document).ready(function () {
                     var type = childSnapshot.child("type").val();
                     var status = childSnapshot.child("status").val();
 
-                    
+
                     if (status == false) {
                         appendRow(task, dueDate, type, trkey);
                     }
@@ -95,12 +94,12 @@ $(document).ready(function () {
         tr.append(td1, td2, td3);
     }
 
-    $("tbody").on('click', 'tr', function() {
+    $("tbody").on('click', 'tr', function () {
         var trID = $(this).attr('id');
 
         $('.completeTask').css("display", "block");
 
-        $("#complete-button").click(function() {
+        $("#complete-button").click(function () {
             var userId = firebase.auth().currentUser.uid;
             var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
             taskRef.update({
@@ -117,5 +116,11 @@ $(document).ready(function () {
 
     });
 
+/*
 
+    function checkItems() {
+        if 
+    }
+    checkItems();
+*/
 });
