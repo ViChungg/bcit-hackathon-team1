@@ -29,6 +29,7 @@ $(document).ready(function () {
             query.once("value").then(function (snapshot) {
 
                 snapshot.forEach(function (childSnapshot) {
+                    var trkey = childSnapshot.key;
 
                     var task = childSnapshot.child("task").val();
                     var dueDate = childSnapshot.child("date").val();
@@ -44,7 +45,7 @@ $(document).ready(function () {
 
                     
                     if (status == false) {
-                        appendRow(task, dueDate, type);
+                        appendRow(task, dueDate, type, trkey);
                     }
 
                 });
@@ -53,13 +54,14 @@ $(document).ready(function () {
         }
     });
 
-    function appendRow(val1, val2, val3) {
+    function appendRow(val1, val2, val3, val4) {
         let task = val1;
         let date = val2;
         let type = val3;
+        let trkey = val4;
 
         /* TABLE ROW */
-        let tr = $("<tr></tr>");
+        let tr = $("<tr id='" + trkey + "'></tr>");
         $("tbody").append(tr);
 
         /* TABLE DATA 1 */
@@ -90,4 +92,20 @@ $(document).ready(function () {
 
         tr.append(td1, td2, td3);
     }
+
+    $("tbody").on('click', 'tr', function() {
+        var trID = $(this).attr('id');
+        $('.completeTask').css("display", "block");
+
+        $("#complete-button").click(function() {
+            var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref("users/" + userId + "/tasks/" + trID).update({
+                "status": true,
+            })
+            $('.completeTask').css("display", "none");
+        })
+
+    });
+
+
 });

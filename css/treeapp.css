@@ -261,23 +261,42 @@ tbody > tr:hover {
 }
 
 /* scroll bar */
-/* width */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: rgba(135, 181, 235, 0); 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.64); 
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #8b8686; 
 }
+
+/* task completion*/
+.completeTask {
+    display: none;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: blue;
+    height: 100px;
+    width: 20%;
+    margin-left: 40%;
+    position: fixed;
+}
+
+#complete-button {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#remove-button{
+    margin-left: 20px;
+}
+
