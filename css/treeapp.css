@@ -359,11 +359,11 @@ tbody>tr:hover {
 }
 
 #fitPoints {
-  color: green;
+  color: red;
 }
 
 #healthPoints {
-  color: red;
+  color: green;
 }
 
 .points {
