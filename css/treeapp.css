@@ -23,6 +23,12 @@ body {
     margin: 20px;
 }
 
+#log-out:hover{
+	transform: scale(1.05);
+	-webkit-transition: transform 0.5s;
+	
+	
+}
 #content {
     width: 100%;
 	display: flex;
@@ -42,6 +48,13 @@ body {
   padding-top: 10px;
 
   filter: invert(100%);
+}
+
+#growthlogo:hover{
+	transform: scale(1.1);
+	-webkit-transition: transform 0.5s;
+	
+	
 }
 
 /* MAIN BACKGROUND */
@@ -73,20 +86,36 @@ body {
     width: 80%;
 }
 
+/* POINTS */
+#counter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.points {
+  background-color: rgba(95, 106, 96, 0.43);
+  padding: 20px 0 0 0;
+  height: 6vw;
+  width: 7vw;
+  display: inline-block;
+  font-size: 3vw;
+}
+
 /* TO-DO LIST */
 #task {
     /* background-color: green; */
     width: 30%;
 	min-width: 186px;
-	border: 0.5px solid white;
-}
 
+	border: 0.5px solid white;
+	border-radius: 4px;
+}
 
 table{
 	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
 	border-collapse: collapse;
-	border-radius: 5px;
+	border-radius: 4px;
 	border: none;
 	 width: 90%;
 }
@@ -119,6 +148,21 @@ button {
 
 button:hover {
   background-color: #4CAF50; /* Green */
+}
+
+#education:hover {
+  background-color: #baba30;
+	-webkit-transition: background-color 0.5s;
+}
+
+#fitness:hover {
+  background-color: #05a205;
+	-webkit-transition: background-color 0.5s;
+}
+
+#health:hover {
+  background-color: rgb(193, 66, 66);
+>>>>>>> 87e454effa4f149e1b52a690a5e8d17943990f2a
 	-webkit-transition: background-color 0.5s;
 }
 
@@ -191,5 +235,11 @@ a {
 a:hover {
   color: #4CAF50;
   cursor: pointer;
+}
+
+tbody > tr:hover {
+    color: white;
+    background-color: lightgrey;
+    cursor: pointer;
 }
 
