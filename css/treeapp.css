@@ -114,7 +114,6 @@ body {
 	border-radius: 4px;
 }
 
-
 table{
 	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
@@ -142,6 +141,17 @@ button {
 	cursor: pointer;
 	font-size: 140%;
 	margin: 10px;
+}
+
+.addicon {
+  width: 15px;
+  float: right;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
 }
 
 #education:hover {
