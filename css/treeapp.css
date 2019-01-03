@@ -207,3 +207,22 @@ tbody > tr:hover {
     cursor: pointer;
 }
 
+.completeTask {
+    display: none;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: blue;
+    height: 100px;
+    width: 20%;
+    margin-left: 40%;
+    position: fixed;
+}
+
+#complete-button {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#remove-button{
+    margin-left: 20px;
+}
