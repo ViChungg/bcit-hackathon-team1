@@ -95,10 +95,16 @@ $(document).ready(function () {
         tr.append(td1, td2, td3);
     }
 
+    var taskWindow = false;
+  
     $("tbody").on('click', 'tr', function() {
         var trID = $(this).attr('id');
 
-        $('.completeTask').css("display", "block");
+        taskWindow = true;        
+      
+        if (taskWindow) {
+          $('.completeTask').css("display", "block");
+        };
 
         $("#complete-button").click(function() {
             var userId = firebase.auth().currentUser.uid;
@@ -114,8 +120,11 @@ $(document).ready(function () {
 
             location.reload();
         })
+      
+        $("#remove-button").click(function() {
+          $('.completeTask').css("display", "none");
+        });
 
     });
-
 
 });
