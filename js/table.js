@@ -85,8 +85,7 @@ $(document).ready(function () {
         } else if (type == 3) {
             iconPath = "../icons/Mental.svg";
         }
-
-        img.text(iconPath);
+        img.attr("src", iconPath);
 
         tr.append(td1, td2, td3);
     }
