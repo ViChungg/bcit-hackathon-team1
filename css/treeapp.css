@@ -23,6 +23,12 @@ body {
     margin: 20px;
 }
 
+#log-out:hover{
+	transform: scale(1.05);
+	-webkit-transition: transform 0.5s;
+	
+	
+}
 #content {
     width: 100%;
 	display: flex;
@@ -42,6 +48,13 @@ body {
   padding-top: 10px;
 
   filter: invert(100%);
+}
+
+#growthlogo:hover{
+	transform: scale(1.1);
+	-webkit-transition: transform 0.5s;
+	
+	
 }
 
 /* MAIN BACKGROUND */
@@ -94,6 +107,7 @@ body {
     width: 30%;
 	min-width: 186px;
 	border: 0.5px solid white;
+	border-radius: 4px;
 }
 
 
@@ -101,7 +115,7 @@ table{
 	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
 	border-collapse: collapse;
-	border-radius: 5px;
+	border-radius: 4px;
 	border: none;
 	 width: 90%;
 }
@@ -126,8 +140,18 @@ button {
 	font-size: 140%;
 }
 
-button:hover {
-  background-color: #4CAF50; /* Green */
+#education:hover {
+  background-color: #baba30;
+	-webkit-transition: background-color 0.5s;
+}
+
+#fitness:hover {
+  background-color: #05a205;
+	-webkit-transition: background-color 0.5s;
+}
+
+#health:hover {
+  background-color: rgb(193, 66, 66);
 	-webkit-transition: background-color 0.5s;
 }
 
