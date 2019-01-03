@@ -8,6 +8,9 @@ $(document).ready(function () {
     //TABLE BODY
     var table = document.getElementById("table-body");
 
+    //MONTHS ARRAY
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
     //TAKES USER ID FROM FIREBASE AUTHENTICATION
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -29,6 +32,13 @@ $(document).ready(function () {
 
                     var task = childSnapshot.child("task").val();
                     var dueDate = childSnapshot.child("date").val();
+
+                    var date = new Date(dueDate);
+                    var month = months[date.getMonth()];
+
+                    var day = date.getDay();
+                    dueDate = month + " " + day;
+
                     var type = childSnapshot.child("type").val();
                     var status = childSnapshot.child("status").val();
 
@@ -63,17 +73,20 @@ $(document).ready(function () {
         /* TABLE DATA 3 */
         let td3 = $("<td></td>");
 
-        var icon;
+        let img = $("<img></img>");
+        td3.append(img);
+
+        var iconPath;
 
         if (type == 1) {
-            icon = 1;
+            iconPath = "../icons/Education.svg";
         } else if (type == 2) {
-            icon = 2;
+            iconPath = "../icons/Fitness.svg";
         } else if (type == 3) {
-            icon = 3;
+            iconPath = "../icons/Mental.svg";
         }
 
-        td3.text(icon);
+        img.text(iconPath);
 
         tr.append(td1, td2, td3);
     }
