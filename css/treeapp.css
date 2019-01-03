@@ -33,12 +33,19 @@ body {
 
 /* LOGO */
 #growthlogo {
+
+  width: 90%;
+  padding-top: 20px;
   width: 20%;
   float: left;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-top: 10px;
+<<<<<<< HEAD
+
+=======
   filter: invert(100%);
+>>>>>>> fe02b36c1582fb9933df88331a18b7c2fa4f480b
 }
 
 /* MAIN BACKGROUND */
