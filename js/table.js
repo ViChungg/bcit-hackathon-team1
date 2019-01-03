@@ -97,13 +97,18 @@ $(document).ready(function () {
 
     var taskWindow = false;
   
-    $("tbody").on('click', 'tr', function() {
+    $("tbody").on('click', 'tr', function(e) {
         var trID = $(this).attr('id');
+        var xCoord = e.clientX;
+        var yCoord = e.clientY + 10;
+
 
         taskWindow = true;        
       
         if (taskWindow) {
           $('.completeTask').css("display", "block");
+          $('.completeTask').css("left", xCoord);
+          $('.completeTask').css("top", yCoord);
         };
 
         $("#complete-button").click(function() {

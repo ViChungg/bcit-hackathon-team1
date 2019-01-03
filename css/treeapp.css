@@ -113,12 +113,8 @@ h2 {
     /* background-color: green; */
     width: 30%;
 	min-width: 186px;
-<<<<<<< HEAD
 	/* border: 0.5px solid white;
 	border-radius: 4px; */
-=======
-	border-radius: 4px;
->>>>>>> 50303bed11a3e108a01719b9e554d82840810d04
 }
 
 #table-wrapper {
@@ -175,12 +171,12 @@ button:hover {
 }
 
 #fitness:hover {
-  background-color: #05a205;
+  background-color: rgb(193, 66, 66);
 	-webkit-transition: background-color 0.5s;
 }
 
 #health:hover {
-  background-color: rgb(193, 66, 66);
+  background-color: #05a205;
 	-webkit-transition: background-color 0.5s;
 }
 
@@ -288,17 +284,18 @@ tbody > tr:hover {
 /* task completion*/
 .completeTask {
     display: none;
-    margin: 0 auto;
-    margin-top: 200px;
-    background-color: white;
-    height: 80px;
-    width: 20%;
-    margin-left: 40%;
-    position: fixed;
+    /* margin: 0 auto;
+    margin-top: 200px; */
+    background-color: rgb(166, 204, 255);
+    height: auto;
+    /* width: 16%;
+    margin-left: 42%; */
+    position: absolute;
+    border-radius: 5px;
+    z-index: 1;
 }
 
 #complete-button {
-    margin-top: 20px;
     margin-right: 5px;
     color: white;
     background-color: yellowgreen;
