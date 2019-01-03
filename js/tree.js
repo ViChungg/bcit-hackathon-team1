@@ -15,6 +15,10 @@ var fitCompleted;
 var healthCompleted;
 
 (function() {
+	/*firebase.auth().onAuthStateChanged(function(user){
+        var ref = firebase.database().ref("users/" + user.uid);
+        var eduData = ref.child("");
+    });*/
 	/* When task is completed, points increases based on category */
 	/* leaves show up based on amount of points */
 });
@@ -34,7 +38,7 @@ eduLeaves.onload = function() {
 		ctx.drawImage(eduLeaves, 175, 295);
 	}
 };
-eduLeaves.src = '../img/leaves.svg';
+eduLeaves.src = '../img/eduleaves.png';
 
 /* Fitness Leaves */
 var fitLeaves = new Image();
@@ -51,7 +55,7 @@ fitLeaves.onload = function() {
 		ctx.drawImage(fitLeaves, 408, 255);
 	}
 };
-fitLeaves.src = '../img/leaves.svg';
+fitLeaves.src = '../img/fitnessleaves.png';
 
 /* Health Leaves */
 var healthLeaves = new Image();

@@ -18,6 +18,7 @@ var healthspan = document.getElementById("closehealth");
 
 /*Reveals the add task page*/
 btn1.onclick = function () {
+  
   edupopup.style.display = "block";
 	containerElement.setAttribute('class', 'blur');
 }
@@ -66,7 +67,7 @@ edusubmit.onclick = function() {
     "status": false,
   });
 
-  alert('success');
+  location.reload();
 
 }
 
@@ -85,7 +86,7 @@ fitsubmit.onclick = function() {
     "status": false,
   });
 
-  alert('success');
+  location.reload();
 
 }
 
@@ -105,7 +106,7 @@ healthsubmit.onclick = function() {
     "status": false,
   });
 
-  alert('success');
+  location.reload();
 
 }
 
@@ -131,3 +132,4 @@ document.getElementById("log-out").onclick = function () {
   firebase.auth().signOut();
   location.href = "./login.html";
 }
+
