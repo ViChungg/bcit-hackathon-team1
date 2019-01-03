@@ -79,14 +79,14 @@ $(document).ready(function () {
         var iconPath;
 
         if (type == 1) {
-            iconPath = "../icons/Education.svg";
+            iconPath = "../icons/book.png";
         } else if (type == 2) {
-            iconPath = "../icons/Fitness.svg";
+            iconPath = "../icons/fitness.png";
         } else if (type == 3) {
-            iconPath = "../icons/Mental.svg";
+            iconPath = "../icons/health.png";
         }
 
-        img.text(iconPath);
+        img.attr("src", iconPath);
 
         tr.append(td1, td2, td3);
     }

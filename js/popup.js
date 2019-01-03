@@ -18,6 +18,7 @@ var healthspan = document.getElementById("closehealth");
 
 /*Reveals the add task page*/
 btn1.onclick = function () {
+  
   edupopup.style.display = "block";
 	containerElement.setAttribute('class', 'blur');
 }
