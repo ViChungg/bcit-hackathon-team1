@@ -95,10 +95,16 @@ $(document).ready(function () {
         tr.append(td1, td2, td3);
     }
 
+    var taskWindow = false;
+  
     $("tbody").on('click', 'tr', function() {
         var trID = $(this).attr('id');
 
-        $('.completeTask').css("display", "block");
+        taskWindow = true;        
+      
+        if (taskWindow) {
+          $('.completeTask').css("display", "block");
+        };
 
         $("#complete-button").click(function() {
             var userId = firebase.auth().currentUser.uid;
@@ -148,8 +154,34 @@ $(document).ready(function () {
             setTimeout(function(){location.reload()}, 900);
 
         })
+      
+        $("#remove-button").click(function() {
+          $('.completeTask').css("display", "none");
+        });
+
+        $("#remove-button").click(function() {
+            var userId = firebase.auth().currentUser.uid;
+            var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
+            taskRef.update({
+                "status": true,
+            })
+            $('.completeTask').css("display", "none");
+
+            taskRef.once("value").then(function (snapshot) {
+                var typePoints = snapshot.child("type").val();
+            })
+
+            location.reload();
+        })
 
     });
 
+});
 
+$(document).mouseup(function(event) {
+    var container = $("#completeTask");
+
+    if (!container.is(event.target)) {
+        container.css("display", "none");
+    }
 });
