@@ -10,24 +10,29 @@ body {
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
 	text-align: center;
-	font-family: 'AirbnbCerealApp-Bold';
+    font-family: 'AirbnbCerealApp-Bold';
 }
 
+#header {
+    height: 100px;
+}
 
 #content {
     width: 100%;
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 /* LOGO */
-#logo {
-    text-align: center;
-}
+
 
 #growthlogo {
-  width: 90%;
+  width: 20%;
+  float: left;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 /* MAIN BACKGROUND */
@@ -37,7 +42,7 @@ body {
 
 /* NAV BAR */
 #nav {
-    //background-color: blue;
+    /* background-color: blue; */
     width: 20%;
 	min-width: 150px;
     text-align: center;
@@ -46,7 +51,7 @@ body {
 
 /* CENTER TREE */
 #tree {
-    //background-color: red;
+    /* background-color: red; */
     width: 45%;
 	min-width: 300px;
     display: inline-block;
@@ -61,7 +66,7 @@ body {
 
 /* TO-DO LIST */
 #task {
-    //background-color: green;
+    /* background-color: green; */
     width: 30%;
 	min-width: 186px;
 }
@@ -135,7 +140,7 @@ button:hover {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 30%;
 }
 
