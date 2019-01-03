@@ -143,3 +143,11 @@ $(document).ready(function () {
     });
 
 });
+
+$(document).mouseup(function(event) {
+    var container = $("#completeTask");
+
+    if (!container.is(event.target)) {
+        container.css("display", "none");
+    }
+});

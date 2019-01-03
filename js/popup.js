@@ -132,6 +132,7 @@ healthsubmit.onclick = function() {
   location.reload();
 
 }
+var completewindow = document.getElementById("completeTask");
 
 /*Closes the task page when clicking outside window*/
 document.onclick = function(event) {
@@ -149,6 +150,7 @@ document.onclick = function(event) {
     healthpopup.style.display = "none";
 	  closeBlur();
   }
+  
 }
 
 document.getElementById("log-out").onclick = function () {
