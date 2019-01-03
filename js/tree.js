@@ -1,9 +1,9 @@
 /* Draw tree */
 var canvas = document.getElementById('myTree');
 var ctx = canvas.getContext('2d');
-var eduPoints = 3;
-var fitPoints = 3;
-var healthPoints = 3;
+var eduPoints = 0;
+var fitPoints = 0;
+var healthPoints = 0;
 
 /* Contains how many tasks completed in education */
 var eduCompleted;
@@ -15,6 +15,10 @@ var fitCompleted;
 var healthCompleted;
 
 (function() {
+	/*firebase.auth().onAuthStateChanged(function(user){
+        var ref = firebase.database().ref("users/" + user.uid);
+        var eduData = ref.child("");
+    });*/
 	/* When task is completed, points increases based on category */
 	/* leaves show up based on amount of points */
 });
