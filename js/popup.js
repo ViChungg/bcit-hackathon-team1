@@ -66,7 +66,7 @@ edusubmit.onclick = function() {
     "status": false,
   });
 
-  alert('success');
+  location.reload();
 
 }
 
@@ -85,7 +85,7 @@ fitsubmit.onclick = function() {
     "status": false,
   });
 
-  alert('success');
+  location.reload();
 
 }
 
@@ -105,7 +105,7 @@ healthsubmit.onclick = function() {
     "status": false,
   });
 
-  alert('success');
+  location.reload();
 
 }
 
