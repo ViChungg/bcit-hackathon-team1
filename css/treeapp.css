@@ -8,13 +8,19 @@ body {
     background-image: url("../img/background-darkblue.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Roboto', sans-serif;
 	text-align: center;
     font-family: 'AirbnbCerealApp-Bold';
+    color: white;
 }
 
 #header {
     height: 100px;
+}
+
+#log-out {
+    float: right;
+    font-size: 20pt;
+    margin: 20px;
 }
 
 #content {
@@ -25,14 +31,17 @@ body {
 }
 
 /* LOGO */
-
-
 #growthlogo {
+
+  width: 90%;
+  padding-top: 20px;
   width: 20%;
   float: left;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-top: 10px;
+
+  filter: invert(100%);
 }
 
 /* MAIN BACKGROUND */
@@ -69,7 +78,9 @@ body {
     /* background-color: green; */
     width: 30%;
 	min-width: 186px;
+	border: 0.5px solid white;
 }
+
 
 table{
 	margin: auto;
@@ -81,21 +92,28 @@ table{
 }
 
 thead{
-	color: black;
+	color: white;
+	font-weight: 800;
+	border: none;
+
 	background-color: rgba(95, 106, 96, 0.43);
 }
 /* BUTTONS */
 
 button {
 	color: white;
-	border-radius: 5px;
-	background-color: #6d7578;
-	border:  none;
+	font-family: 'Abel', sans-serif;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0);
+	border: 0.5px solid white;
+	margin: white;
 	cursor: pointer;
+	font-size: 140%;
 }
 
 button:hover {
   background-color: #4CAF50; /* Green */
+	-webkit-transition: background-color 0.5s;
 }
 
 #education {
@@ -160,7 +178,7 @@ footer {
 }
 
 a {
-  color: black;
+  color: white;
   padding: 10px;
 }
 

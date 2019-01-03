@@ -53,6 +53,7 @@ healthspan.onclick = function() {
 edusubmit.onclick = function() {
   edupopup.style.display = "none";
 	containerElement.setAttribute('class', null);
+  
   var eduEventName = $("#eduTask").val();
   var eduDate = $("#eduDate").val();
   
@@ -109,23 +110,24 @@ healthsubmit.onclick = function() {
 }
 
 /*Closes the task page when clicking outside window*/
-window.onclick = function(event) {
+document.onclick = function(event) {
   if (event.target == edupopup) {
     edupopup.style.display = "none";
 	  containerElement.setAttribute('class', null);
   }
-}
 
-window.onclick = function(event) {
   if (event.target == fitpopup) {
     fitpopup.style.display = "none";
 	  containerElement.setAttribute('class', null);
   }
-}
 
-window.onclick = function(event) {
   if (event.target == healthpopup) {
     healthpopup.style.display = "none";
 	  containerElement.setAttribute('class', null);
   }
+}
+
+document.getElementById("log-out").onclick = function () {
+  firebase.auth().signOut();
+  location.href = "./login.html";
 }

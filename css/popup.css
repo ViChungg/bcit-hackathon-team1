@@ -1,56 +1,78 @@
 /*The main popup window*/
 .popup {
-  position: fixed;
-  z-index: 999;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(96, 96, 96, 0.2);
-  -webkit-transition: 0.5s;
-  transition: all 0.3s linear;
+	position: fixed;
+	z-index: 999;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	font-family: 'Abel', sans-serif;
+	background-color: rgba(96, 96, 96, 0.2);
+
 }
 
 #educationPopup {
-  display: none;
+	display: none;
+
 }
 
 #fitnessPopup {
-  display: none;
+	display: none;
 }
 
 #healthPopup {
-  display: none;
+	display: none;
 }
+
 .content {
-  background-color: white;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 40%;
-  height: 40%;
-  text-align: center;
-  border-radius: 10px;
+	background-color: white;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+	height: 40%;
+	text-align: center;
+	border-radius: 10px;
+	transition: all .25s ease-in-out;
 }
-  
+
 .input {
-  margin: 5px;
+
+	margin: 5px;
 }
 
 .submitbutton {
-  
+	margin: 15px;
+	color: black;
+	font-family: 'Abel', sans-serif;
+	font-weight: 800;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0);
+	border: 0.5px solid black;
+	margin: white;
+	cursor: pointer;
+}
+
+.submitbutton:hover {
+  background-color: grey; 
+	-webkit-transition: background-color 0.5s;
+
 }
 
 .close {
-  color: black;
-  float: right;
-  font-size: 20pt;
-  font-weight: bold;
+	color: black;
+	float: right;
+	font-size: 20pt;
+	font-weight: bold;
 }
 
-.close:hover, .close:focus {
-  color: grey;
-  cursor: pointer;
+.close:hover,
+.close:focus {
+	color: grey;
+	cursor: pointer;
 }
+
+
+
