@@ -97,14 +97,19 @@ $(document).ready(function () {
     }
 
     var taskWindow = false;
-  
-    $("tbody").on('click', 'tr', function() {
-        var trID = $(this).attr('id');
 
-        taskWindow = true;        
-      
+    $("tbody").on('click', 'tr', function (e) {
+        var trID = $(this).attr('id');
+        var xCoord = e.clientX;
+        var yCoord = e.clientY + 10;
+
+
+        taskWindow = true;
+
         if (taskWindow) {
-          $('.completeTask').css("display", "block");
+            $('.completeTask').css("display", "block");
+            $('.completeTask').css("left", xCoord);
+            $('.completeTask').css("top", yCoord);
         };
 
         $("#complete-button").click(function () {
@@ -124,7 +129,7 @@ $(document).ready(function () {
                 var typePoints = parseInt(snapshot.child("type").val());
                 console.log(typePoints);
                 if (typePoints == 1) {
-                    eduRef.once('value').then(function(snap) {
+                    eduRef.once('value').then(function (snap) {
                         var ePoints = parseInt(snap.val());
                         console.log(ePoints);
                         ePoints++;
@@ -134,7 +139,7 @@ $(document).ready(function () {
                         })
                     })
                 } else if (typePoints == 2) {
-                    fitRef.once('value').then(function(snap) {
+                    fitRef.once('value').then(function (snap) {
                         var fPoints = parseInt(snap.val());
                         fPoints++;
                         userRef.update({
@@ -142,7 +147,7 @@ $(document).ready(function () {
                         })
                     })
                 } else if (typePoints == 3) {
-                    healthRef.once('value').then(function(snap) {
+                    healthRef.once('value').then(function (snap) {
                         var hPoints = parseInt(snap.val());
                         hPoints++;
                         userRef.update({
@@ -152,15 +157,17 @@ $(document).ready(function () {
                 }
             })
 
-            setTimeout(function(){location.reload()}, 900);
+            setTimeout(function () {
+                location.reload()
+            }, 900);
 
         })
-      
-        $("#remove-button").click(function() {
-          $('.completeTask').css("display", "none");
+
+        $("#remove-button").click(function () {
+            $('.completeTask').css("display", "none");
         });
 
-        $("#remove-button").click(function() {
+        $("#remove-button").click(function () {
             var userId = firebase.auth().currentUser.uid;
             var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
             taskRef.update({
@@ -182,7 +189,6 @@ $(document).ready(function () {
 
 });
 
-
 $(document).ready(function(){
     setTimeout(function() {
         if ($("#table-body tr").length == 0) {
@@ -196,7 +202,7 @@ $(document).ready(function(){
     console.log($("#table-body tr").length == 0);
 });
 
-$(document).mouseup(function(event) {
+$(document).mouseup(function (event) {
     var completewindow = $("#completeTask");
 
     if (!completewindow.is(event.target)) {

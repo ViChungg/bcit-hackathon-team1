@@ -2,163 +2,164 @@
 <html>
 
 <head>
-	<title>Growth</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" type="text/css" href="../css/treeapp.css">
+  <link rel="stylesheet" type="text/css" href="../css/treeapp.css">
 
-	<link rel="stylesheet" type="text/css" href="../css/popup.css">
+  <link rel="stylesheet" type="text/css" href="../css/popup.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 
-	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Roboto');
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
 	</style>
 
 </head>
 
 <body>
-	
-	<!--needs the inline script here to prevent flickering on reloads-->
-	<script>
-		document.body.className += ' fade-out';
 
-		$(function() {
-			$('body').removeClass('fade-out');
-		});
-	</script>
+  <!--needs the inline script here to prevent flickering on reloads-->
+  <script>
+    document.body.className += ' fade-out';
 
-	<!--link to script document for rest of JS-->
-	<script type="text/javascript" src="../js/myfbase.js"></script>
-	<div id="header">
-		<img id="growthlogo" src="../img/LogoMakr_1.png" />
-		<button id="log-out" type="button" class="header-button"> Sign Out</button>
-	</div>
+    $(function () {
+      $('body').removeClass('fade-out');
+    });
+  </script>
 
-
-	<div class="completeTask" id="completeTask">
-		<button id="complete-button">Complete</button>
-		<button id="remove-button">Remove</button>
-	</div>
+  <!--link to script document for rest of JS-->
+  <script type="text/javascript" src="../js/myfbase.js"></script>
+  <div id="header">
+    <img id="growthlogo" src="../img/LogoMakr_1.png" />
+    <button id="log-out" type="button" class="header-button"> Sign Out</button>
+  </div>
 
 
-	<div id="content">
+  <div class="completeTask" id="completeTask">
+    <button id="complete-button">Complete</button>
+    <button id="remove-button">Remove</button>
+  </div>
 
-		<div id="main"></div>
 
-		<div id="nav">
-			<h2>Events</h2>
-			<button id="education" type="button" class="nav-buttons">
-				Education
-				<img class="addicon" src="../icons/add_icon.png" />
-			</button>
-			<button id="fitness" type="button" class="nav-buttons">
-				Fitness
-				<img class="addicon" src="../icons/add_icon.png" />
-			</button>
-			<button id="health" type="button" class="nav-buttons">
-				Health
-				<img class="addicon" src="../icons/add_icon.png" />
-			</button>
+  <div id="content">
 
-		</div>
+    <div id="main"></div>
 
-<!-- tree -->
-		<div id="tree">
-			<canvas id="myTree" width="600" height="600"></canvas>
-			
-			<h2>Score</h2>
-			<div id="counter">
+    <div id="nav">
+      <h2>Events</h2>
+      <button id="education" type="button" class="nav-buttons">
+        Education
+        <img class="addicon" src="../icons/add_icon.png" />
+      </button>
+      <button id="fitness" type="button" class="nav-buttons">
+        Fitness
+        <img class="addicon" src="../icons/add_icon.png" />
+      </button>
+      <button id="health" type="button" class="nav-buttons">
+        Health
+        <img class="addicon" src="../icons/add_icon.png" />
+      </button>
 
-				<div id="eduPoints" class="points">0</div>
-				<div id="fitPoints" class="points">0</div>
-				<div id="healthPoints" class="points">0</div>
-			</div>
-		</div>
-      
-<!-- tree score -->
-        <div id="counter">
+    </div>
 
-            <div id="eduPoints" class="points">0</div>
-            <div id="fitPoints" class="points">0</div>
-            <div id="healthPoints" class="points">0</div>
+    <!-- tree -->
+    <div id="tree">
+      <canvas id="myTree" width="600" height="600"></canvas>
+
+      <h2>Score</h2>
+      <div id="counter">
+
+        <div id="eduPoints" class="points">0</div>
+        <div id="fitPoints" class="points">0</div>
+        <div id="healthPoints" class="points">0</div>
+      </div>
+    </div>
+
+    <!-- tree score -->
+    <div id="counter">
+
+      <div id="eduPoints" class="points">0</div>
+      <div id="fitPoints" class="points">0</div>
+      <div id="healthPoints" class="points">0</div>
+    </div>
+
+    <!-- table with all tasks shown-->
+    <div id="task">
+      <h2>Tasks</h2>
+      <div id="table-wrapper">
+        <div class="task-list">
+          <table>
+            <thead>
+
+              <td class="td-task">Task</td>
+              <td class="td-date">Due Date</td>
+              <td class="td-type">Type</td>
+
+            </thead>
+            <tbody id="table-body"> </tbody>
+          </table>
+          <p id="noItems">No tasks to do!</p>
         </div>
-      
-<!-- table with all tasks shown-->
-		<div id="task">
-			<h2>Tasks</h2>
-			<div id="table-wrapper">
-			<div class="task-list">
-				<table>
-					<thead>
 
-						<td class="td-task">Task</td>
-						<td class="td-date">Due Date</td>
-						<td class="td-type">Type</td>
-
-					</thead>
-					<tbody id="table-body"></tbody>
-				</table>
-				<p id="noItems">No tasks to do!</p>
-			</div>
-			</div>
-		</div>
-	</div>
-<!-- Add an educational task popup-->
-	<div id="educationPopup" class="popup">
+      </div>
+    </div>
+  </div>
+  <!-- Add an educational task popup-->
+  <div id="educationPopup" class="popup">
 
 
-		<div class="content">
-			<span id=closeeducation class="close">x</span>
-			<h1>Education</h1>
-			<span class="close"></span>
-			<input type=text class="input" id="eduTask" name="task" placeholder="Task">
-			<br />
-			<input type=date class="input" id="eduDate" name=dueDate placeholder="Due Date" value="2019-01-02">
-			<br />
-			<input type=submit class="submitbutton" id="edusubmit" name="edusubmit">
-		</div>
+    <div class="content">
+      <span id=closeeducation class="close">x</span>
+      <h1>Education</h1>
+      <span class="close"></span>
+      <input type=text class="input" id="eduTask" name="task" placeholder="Task">
+      <br />
+      <input type=date class="input" id="eduDate" name=dueDate placeholder="Due Date" value="2019-01-02">
+      <br />
+      <input type=submit class="submitbutton" id="edusubmit" name="edusubmit">
+    </div>
 
-	</div>
-<!-- Add a fitness task popup-->
-	<div id="fitnessPopup" class="popup">
+  </div>
+  <!-- Add a fitness task popup-->
+  <div id="fitnessPopup" class="popup">
 
-		<div class="content">
-			<span id=closefit class="close">x</span>
-			<h1>Fitness</h1>
-			<input type=text class="input" id="fitTask" name=task placeholder="Task">
-			<br />
-			<input type=date class="input" id="fitDate" name=dueDate value="2019-01-02">
-			<br />
-			<input type=submit class="submitbutton" id="fitsubmit" name="fitsubmit">
-		</div>
+    <div class="content">
+      <span id=closefit class="close">x</span>
+      <h1>Fitness</h1>
+      <input type=text class="input" id="fitTask" name=task placeholder="Task">
+      <br />
+      <input type=date class="input" id="fitDate" name=dueDate value="2019-01-02">
+      <br />
+      <input type=submit class="submitbutton" id="fitsubmit" name="fitsubmit">
+    </div>
 
-	</div>
-<!-- add a health event popup-->
-	<div id="healthPopup" class="popup">
+  </div>
+  <!-- add a health event popup-->
+  <div id="healthPopup" class="popup">
 
-		<div class="content">
-			<span id=closehealth class="close">x</span>
-			<h1>Health</h1>
-			<input type=text class="input" id="healthTask" name=task placeholder="Task">
-			<br />
-			<input type=date class="input" id="healthDate" name=dueDate value="2019-01-02">
-			<br />
-			<input type=submit class="submitbutton" id="healthsubmit" name="healthsubmit">
-		</div>
+    <div class="content">
+      <span id=closehealth class="close">x</span>
+      <h1>Health</h1>
+      <input type=text class="input" id="healthTask" name=task placeholder="Task">
+      <br />
+      <input type=date class="input" id="healthDate" name=dueDate value="2019-01-02">
+      <br />
+      <input type=submit class="submitbutton" id="healthsubmit" name="healthsubmit">
+    </div>
 
-	</div>
+  </div>
 
-<!--Footer with about, help, and contact links-->
-	<footer>
-		&copy; 2019 BCIT Hackathon Team 1 |
-		<a href=#> About </a>|
-		<a href=#> Help </a>|
-		<a href=#> Contact </a>
-	</footer>
+  <!--Footer with about, help, and contact links-->
+  <footer>
+    &copy; 2019 BCIT Hackathon Team 1 |
+    <a href=#> About </a>|
+    <a href=#> Help </a>|
+    <a href=#> Contact </a>
+  </footer>
 
 </body>
 
