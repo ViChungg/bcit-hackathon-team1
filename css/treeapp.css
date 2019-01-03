@@ -108,7 +108,7 @@ h2 {
 }
 
 .points {
-    background-color: rgba(52, 90, 71, 0.83);
+    background-color: none;
     padding: 20px 0 0 0;
     height: 6vw;
     width: 7vw;
@@ -345,7 +345,34 @@ tbody>tr:hover {
     }
 }
 
-<<<<<<< HEAD>>>>>>>50303bed11a3e108a01719b9e554d82840810d04=======
+/* POINTS */
+#counter {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    left: 35%;
+    margin: 0 auto;
+    z-index: 100;
 }
 
->>>>>>>0febdc5164b9b1dbb481d20cee5c8c2fe167a346
+#eduPoints {
+  color: yellow;
+}
+
+#fitPoints {
+  color: green;
+}
+
+#healthPoints {
+  color: red;
+}
+
+.points {
+/*  background-color: rgba(52, 90, 71, 0.83);*/
+  padding-top: 35px;
+  height: 1.5em;
+  width: 7vw;
+  display: inline-block;
+  font-size: 24pt;
+}
+
