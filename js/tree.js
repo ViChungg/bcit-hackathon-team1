@@ -1,9 +1,9 @@
 /* Draw tree */
 var canvas = document.getElementById('myTree');
 var ctx = canvas.getContext('2d');
-var eduPoints = 0;
-var fitPoints = 0;
-var healthPoints = 0;
+var eduPoints = 3;
+var fitPoints = 3;
+var healthPoints = 3;
 
 /* Contains how many tasks completed in education */
 var eduCompleted;
@@ -38,7 +38,7 @@ eduLeaves.onload = function() {
 		ctx.drawImage(eduLeaves, 175, 295);
 	}
 };
-eduLeaves.src = '../img/leaves.svg';
+eduLeaves.src = '../img/eduleaves.png';
 
 /* Fitness Leaves */
 var fitLeaves = new Image();
@@ -55,7 +55,7 @@ fitLeaves.onload = function() {
 		ctx.drawImage(fitLeaves, 408, 255);
 	}
 };
-fitLeaves.src = '../img/leaves.svg';
+fitLeaves.src = '../img/fitnessleaves.png';
 
 /* Health Leaves */
 var healthLeaves = new Image();
