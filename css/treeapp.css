@@ -111,6 +111,12 @@ button {
 	font-size: 140%;
 }
 
+.addicon {
+  width: 20px;
+  float: right;
+  padding-right: 10px;  
+}
+
 button:hover {
   background-color: #4CAF50; /* Green */
 	-webkit-transition: background-color 0.5s;
