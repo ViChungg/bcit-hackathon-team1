@@ -13,6 +13,10 @@ body {
     color: white;
 }
 
+h2 {
+    font-family: 'AirbnbCerealApp-Bold';
+}
+
 #header {
     height: 100px;
 }
