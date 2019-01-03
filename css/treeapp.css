@@ -85,11 +85,11 @@ body {
 
 .points {
   background-color: rgba(95, 106, 96, 0.43);
-  padding: 15px 0 0 0;
-  height: 8vw;
-  width: 8vw;
+  padding: 20px 0 0 0;
+  height: 6vw;
+  width: 7vw;
   display: inline-block;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 /* TO-DO LIST */
