@@ -132,3 +132,4 @@ document.getElementById("log-out").onclick = function () {
   firebase.auth().signOut();
   location.href = "./login.html";
 }
+

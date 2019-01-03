@@ -93,7 +93,6 @@ body {
     /* background-color: green; */
     width: 30%;
 	min-width: 186px;
-	border: 0.5px solid white;
 }
 
 
@@ -200,5 +199,11 @@ a {
 a:hover {
   color: #4CAF50;
   cursor: pointer;
+}
+
+tbody > tr:hover {
+    color: white;
+    background-color: lightgrey;
+    cursor: pointer;
 }
 
