@@ -16,37 +16,47 @@ var eduspan = document.getElementById("closeeducation");
 var fitspan = document.getElementById("closefit");
 var healthspan = document.getElementById("closehealth");
 
+function openBlur() {
+  $("#content, #header, #footer").css("-webkit-animation", "image_blur 1s");
+  $("#content, #header, #footer").css("filter", "blur(15px)");
+}
+
+function closeBlur() {
+  $("#content, #header, #footer").css("-webkit-animation", "image_blur_reverse 1s");
+  $("#content, #header, #footer").css("filter", "blur(0px)");
+}
+
 /*Reveals the add task page*/
 btn1.onclick = function () {
   
   edupopup.style.display = "block";
-	containerElement.setAttribute('class', 'blur');
+  openBlur();
 }
 
 btn2.onclick = function() {
   fitpopup.style.display = "block";
-	containerElement.setAttribute('class', 'blur');
+  openBlur();
 }
 
 btn3.onclick = function() {
   healthpopup.style.display = "block";
-	containerElement.setAttribute('class', 'blur');
+  openBlur();
 }
 
 /*Closes the task page*/
 eduspan.onclick = function() {
   edupopup.style.display = "none";
-	containerElement.setAttribute('class', null);
+	closeBlur();
 }
 
 fitspan.onclick = function() {
   fitpopup.style.display = "none";
-	containerElement.setAttribute('class', null);
+	closeBlur();
 }
 
 healthspan.onclick = function() {
   healthpopup.style.display = "none";
-	containerElement.setAttribute('class', null);
+  closeBlur();
 }
 
 /*Closes the task page when submitting*/
@@ -127,17 +137,17 @@ healthsubmit.onclick = function() {
 document.onclick = function(event) {
   if (event.target == edupopup) {
     edupopup.style.display = "none";
-	  containerElement.setAttribute('class', null);
+	  closeBlur();
   }
 
   if (event.target == fitpopup) {
     fitpopup.style.display = "none";
-	  containerElement.setAttribute('class', null);
+	  closeBlur();
   }
 
   if (event.target == healthpopup) {
     healthpopup.style.display = "none";
-	  containerElement.setAttribute('class', null);
+	  closeBlur();
   }
 }
 
