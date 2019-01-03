@@ -77,6 +77,7 @@ body {
 	min-width: 186px;
 }
 
+
 table{
 	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
@@ -102,6 +103,7 @@ button {
 
 button:hover {
   background-color: #4CAF50; /* Green */
+	-webkit-transition: background-color 0.5s;
 }
 
 #education {
