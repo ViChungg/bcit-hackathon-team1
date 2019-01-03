@@ -125,6 +125,21 @@ $(document).ready(function () {
           $('.completeTask').css("display", "none");
         });
 
+        $("#remove-button").click(function() {
+            var userId = firebase.auth().currentUser.uid;
+            var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
+            taskRef.update({
+                "status": true,
+            })
+            $('.completeTask').css("display", "none");
+
+            taskRef.once("value").then(function (snapshot) {
+                var typePoints = snapshot.child("type").val();
+            })
+
+            location.reload();
+        })
+
     });
 
 });
