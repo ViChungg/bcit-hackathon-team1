@@ -26,6 +26,10 @@ body {
     text-align: center;
 }
 
+#growthlogo {
+  width: 90%;
+}
+
 /* MAIN BACKGROUND */
 #main {
     background-color: yellow;
@@ -128,3 +132,19 @@ button:hover {
 
 .blur   {
 	filter: blur(5px);}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}
+
+a {
+  color: black;
+  padding: 10px;
+}
+
+a:hover {
+  color: #4CAF50;
+  cursor: pointer;
+}

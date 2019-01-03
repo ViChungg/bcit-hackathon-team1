@@ -59,10 +59,10 @@ edusubmit.onclick = function() {
   // userId firebase reference
   var userId = firebase.auth().currentUser.uid;
   firebase.database().ref("users/" + userId + "/tasks").push({
-    "eduEventName": eduEventName,
-    "eduDate": eduDate,
-    "eduType": "1",
-    "eduStatus": false,
+    "task": eduEventName,
+    "date": eduDate,
+    "type": "1",
+    "status": false,
   });
 
   alert('success');
@@ -78,10 +78,10 @@ fitsubmit.onclick = function() {
 
   var userId = firebase.auth().currentUser.uid;
   firebase.database().ref("users/" + userId + "/tasks").push({
-    "fitEventName": fitEventName,
-    "fitDate": fitDate,
-    "fitType": "2",
-    "fitStatus": false,
+    "task": fitEventName,
+    "date": fitDate,
+    "type": "2",
+    "status": false,
   });
 
   alert('success');
@@ -98,10 +98,10 @@ healthsubmit.onclick = function() {
   
   var userId = firebase.auth().currentUser.uid;
   firebase.database().ref("users/" + userId + "/tasks").push({
-    "eduEventName": healthEventName,
-    "eduDate": healthDate,
-    "eduType": "3",
-    "eduStatus": false,
+    "task": healthEventName,
+    "date": healthDate,
+    "type": "3",
+    "status": false,
   });
 
   alert('success');
