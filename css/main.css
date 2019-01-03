@@ -96,10 +96,8 @@ input[type=submit] {
 }
 
 .title {
-  margin: 0 auto;
-  font-family: 'AirbnbCerealApp-Bold';
+  text-align: center;
   padding-top: 55px;
-  color: rgb(70, 64, 64);
 }
 
 h1 {
@@ -108,7 +106,27 @@ h1 {
 }
 
 #growthlogo {
-  float:left;
   width: 90%;
-  height: 60px;
+  height: 65px;
+}
+
+/* LOGO */
+#growthlogo {
+
+  width: 100%;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: block;
+
+  filter: invert(100%);
+}
+
+#growthlogo:hover{
+	transform: scale(1.1);
+	-webkit-transition: transform 0.5s;
+	
+	
 }
