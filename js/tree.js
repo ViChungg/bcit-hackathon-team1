@@ -31,7 +31,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 		} else if (eduPoints == 2) {
 			ctx.drawImage(eduLeaves, 90, 295);
 			ctx.drawImage(eduLeaves, 134, 369);
-		} else if (eduPoints == 3) {
+		} else if (eduPoints >= 3) {
 			ctx.drawImage(eduLeaves, 90, 295);
 			ctx.drawImage(eduLeaves, 134, 369);
 			ctx.drawImage(eduLeaves, 175, 295);
@@ -47,7 +47,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 		} else if (fitPoints == 2) {
 			ctx.drawImage(fitLeaves, 450, 180);
 			ctx.drawImage(fitLeaves, 365, 182);
-		} else if (fitPoints == 3) {
+		} else if (fitPoints >= 3) {
 			ctx.drawImage(fitLeaves, 450, 180);
 			ctx.drawImage(fitLeaves, 365, 182);
 			ctx.drawImage(fitLeaves, 408, 255);
@@ -64,7 +64,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 		} else if (healthPoints == 2) {
 			ctx.drawImage(healthLeaves, 265, 50);	
 			ctx.drawImage(healthLeaves, 222, 112);
-		} else if (healthPoints == 3) {
+		} else if (healthPoints >= 3) {
 			ctx.drawImage(healthLeaves, 265, 35);
 			ctx.drawImage(healthLeaves, 222, 105);
 			ctx.drawImage(healthLeaves, 309, 105);

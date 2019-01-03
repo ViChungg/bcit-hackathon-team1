@@ -11,7 +11,6 @@ $(document).ready(function () {
     //MONTHS ARRAY
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-    
 
     //TAKES USER ID FROM FIREBASE AUTHENTICATION
     firebase.auth().onAuthStateChanged(function (user) {
@@ -24,7 +23,7 @@ $(document).ready(function () {
     rootRef.once("value").then(function (snapshot) {
         /* change when nodes are built" */
         if (snapshot.child("users/" + userid).hasChild("tasks")) {
-            
+
             var query = firebase.database().ref("users/" + userid + "/tasks");
 
 
@@ -46,7 +45,7 @@ $(document).ready(function () {
                     var type = childSnapshot.child("type").val();
                     var status = childSnapshot.child("status").val();
 
-                    
+
                     if (status == false) {
                         appendRow(task, dueDate, type, trkey);
                     }
@@ -65,7 +64,7 @@ $(document).ready(function () {
 
         /* TABLE ROW */
         let tr = $("<tr id='" + trkey + "'></tr>");
-        $("tbody").append(tr);
+        $("#table-body").append(tr);
 
         /* TABLE DATA 1 */
         let td1 = $("<td></td>");
@@ -111,7 +110,7 @@ $(document).ready(function () {
           $('.completeTask').css("top", yCoord);
         };
 
-        $("#complete-button").click(function() {
+        $("#complete-button").click(function () {
             var userId = firebase.auth().currentUser.uid;
             var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
             var eduRef = firebase.database().ref("users/" + userId + "/eduPoints");
@@ -181,12 +180,28 @@ $(document).ready(function () {
 
     });
 
+
+
+
+});
+
+$(document).ready(function(){
+    function checkItems() {
+        if (!document.getElementById("table-body").hasChildNodes()) {
+            console.log("hello");
+            $("#noItems").css("display", "block");
+        } else if (document.getElementById("table-body").hasChildNodes()) {
+            console.log("good");
+            $("#noItems").css("display", "none");
+        }
+    }
+    checkItems();
 });
 
 $(document).mouseup(function(event) {
-    var container = $("#completeTask");
+    var completewindow = $("#completeTask");
 
-    if (!container.is(event.target)) {
-        container.css("display", "none");
+    if (!completewindow.is(event.target)) {
+        completewindow.css("display", "none");
     }
 });
