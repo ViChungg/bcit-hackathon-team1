@@ -113,8 +113,12 @@ h2 {
     /* background-color: green; */
     width: 30%;
 	min-width: 186px;
+<<<<<<< HEAD
 	/* border: 0.5px solid white;
 	border-radius: 4px; */
+=======
+	border-radius: 4px;
+>>>>>>> 50303bed11a3e108a01719b9e554d82840810d04
 }
 
 #table-wrapper {
@@ -286,20 +290,24 @@ tbody > tr:hover {
     display: none;
     margin: 0 auto;
     margin-top: 200px;
-    background-color: blue;
-    height: 100px;
+    background-color: white;
+    height: 80px;
     width: 20%;
     margin-left: 40%;
     position: fixed;
 }
 
 #complete-button {
-    margin-top: 30px;
-    margin-right: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+    color: white;
+    background-color: yellowgreen;
 }
 
 #remove-button{
-    margin-left: 20px;
+    margin-left: 5px;
+    color: white;
+    background-color: orangered;
 }
 
 /* Image blur CSS, used in js file */
