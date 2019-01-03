@@ -13,21 +13,26 @@ body {
     font-family: 'AirbnbCerealApp-Bold';
 }
 
+#header {
+    height: 100px;
+}
 
 #content {
     width: 100%;
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 /* LOGO */
-#logo {
-    text-align: center;
-}
+
 
 #growthlogo {
-  width: 90%;
+  width: 20%;
+  float: left;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 /* MAIN BACKGROUND */
@@ -135,7 +140,7 @@ button:hover {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 30%;
 }
 
