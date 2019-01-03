@@ -23,11 +23,18 @@ body {
     margin: 20px;
 }
 
+#log-out:hover{
+	transform: scale(1.05);
+	-webkit-transition: transform 0.5s;
+	
+	
+}
 #content {
     width: 100%;
 	display: flex;
 	justify-content: center;
     flex-wrap: wrap;
+	margin-bottom: 15px;
 }
 
 /* LOGO */
@@ -44,6 +51,13 @@ body {
   filter: invert(100%);
 }
 
+#growthlogo:hover{
+	transform: scale(1.1);
+	-webkit-transition: transform 0.5s;
+	
+	
+}
+
 /* MAIN BACKGROUND */
 #main {
     background-color: yellow;
@@ -55,6 +69,8 @@ body {
     width: 20%;
 	min-width: 150px;
     text-align: center;
+	position: relative;
+	top: 25px;
     /*CHANGE FOR RESLOUTION OF SCREEN*/
 }
 
@@ -93,14 +109,16 @@ body {
     /* background-color: green; */
     width: 30%;
 	min-width: 186px;
-}
 
+	border: 0.5px solid white;
+	border-radius: 4px;
+}
 
 table{
 	margin: auto;
 	background-color: rgba(137, 141, 141, 0.56);
 	border-collapse: collapse;
-	border-radius: 5px;
+	border-radius: 4px;
 	border: none;
 	 width: 90%;
 }
@@ -110,7 +128,7 @@ thead{
 	font-weight: 800;
 	border: none;
 
-	background-color: rgba(95, 106, 96, 0.43);
+	background-color: rgba(137, 141, 141, 0.56);
 }
 /* BUTTONS */
 
@@ -120,34 +138,56 @@ button {
 	border-radius: 4px;
 	background-color: rgba(255, 255, 255, 0);
 	border: 0.5px solid white;
-	margin: white;
 	cursor: pointer;
 	font-size: 140%;
+	margin: 10px;
+}
+
+.addicon {
+  width: 15px;
+  float: right;
+  padding-right: 10px;
+  padding-top: 5px;
 }
 
 button:hover {
   background-color: #4CAF50; /* Green */
+}
+
+#education:hover {
+  background-color: #baba30;
+	-webkit-transition: background-color 0.5s;
+}
+
+#fitness:hover {
+  background-color: #05a205;
+	-webkit-transition: background-color 0.5s;
+}
+
+#health:hover {
+  background-color: rgb(193, 66, 66);
 	-webkit-transition: background-color 0.5s;
 }
 
 #education {
     width: 90%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
     margin-top: 10px;
+	
 }
 
 #fitness {
     width: 90%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
 }
 
 
 #health {
     width: 90%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
 }
 
 .nav-buttons {
@@ -186,9 +226,13 @@ button:hover {
 	filter: blur(5px);}
 
 footer {
-  position: absolute;
-  bottom: 10px;
-  left: 30%;
+	font-size: 12pt;
+	font-family: 'calibri', sans-serif;
+  position: relative;
+  bottom: px;
+  text-align: center;
+	background-color: rgba(0, 0, 0, 0.43);
+	border-radius: 5px;
 }
 
 a {
