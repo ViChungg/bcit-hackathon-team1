@@ -11,10 +11,17 @@ body {
     font-family: 'Roboto', sans-serif;
 	text-align: center;
     font-family: 'AirbnbCerealApp-Bold';
+    color: white;
 }
 
 #header {
     height: 100px;
+}
+
+#log-out {
+    float: right;
+    font-size: 20pt;
+    margin: 20px;
 }
 
 #content {
@@ -25,8 +32,6 @@ body {
 }
 
 /* LOGO */
-
-
 #growthlogo {
 
   width: 90%;
@@ -36,7 +41,11 @@ body {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-top: 10px;
+<<<<<<< HEAD
 
+=======
+  filter: invert(100%);
+>>>>>>> fe02b36c1582fb9933df88331a18b7c2fa4f480b
 }
 
 /* MAIN BACKGROUND */
@@ -59,13 +68,13 @@ body {
     width: 45%;
 	min-width: 300px;
     display: inline-block;
+    text-align: center;
 }
 
 #myTree {
-    margin: 0 auto;
+    margin: 0;
     background-color: transparent;
     width: 80%;
-    margin: 0em 0em 0em 2.5em;
 }
 
 /* TO-DO LIST */
@@ -74,6 +83,7 @@ body {
     width: 30%;
 	min-width: 186px;
 }
+
 
 table{
 	margin: auto;
@@ -85,7 +95,7 @@ table{
 }
 
 thead{
-	color: black;
+	color: white;
 	background-color: rgba(95, 106, 96, 0.43);
 }
 /* BUTTONS */
@@ -100,6 +110,7 @@ button {
 
 button:hover {
   background-color: #4CAF50; /* Green */
+	-webkit-transition: background-color 0.5s;
 }
 
 #education {
@@ -149,7 +160,7 @@ footer {
 }
 
 a {
-  color: black;
+  color: white;
   padding: 10px;
 }
 
