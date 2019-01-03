@@ -172,3 +172,17 @@ document.getElementById("log-out").onclick = function () {
 document.getElementById("growthlogo").onclick = function () {
   location.reload();
 };
+
+var tree = document.getElementById("tree");
+var counter = document.getElementById("counter");
+
+tree.addEventListener("mouseover", mouseOver);
+tree.addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  counter.style.display = "block";
+}
+
+function mouseOut(){
+  counter.style.display = "none";
+}
