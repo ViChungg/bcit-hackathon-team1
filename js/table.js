@@ -11,6 +11,8 @@ $(document).ready(function () {
     //MONTHS ARRAY
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
+    
+
     //TAKES USER ID FROM FIREBASE AUTHENTICATION
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -36,8 +38,8 @@ $(document).ready(function () {
 
                     var date = new Date(dueDate);
                     var month = months[date.getMonth()];
+                    var day = date.getDate();
 
-                    var day = date.getDay();
                     dueDate = month + " " + day;
 
                     var type = childSnapshot.child("type").val();
@@ -87,7 +89,6 @@ $(document).ready(function () {
         } else if (type == 3) {
             iconPath = "../icons/health.png";
         }
-
         img.attr("src", iconPath);
 
         tr.append(td1, td2, td3);
