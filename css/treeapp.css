@@ -348,7 +348,7 @@ tbody>tr:hover {
 #counter {
     display: none;
     position: absolute;
-    bottom: 150px;
+    bottom: 100px;
     left: 35%;
     margin: 0 auto;
     z-index: 100;
