@@ -8,7 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/treeapp.css">
 
 	<link rel="stylesheet" type="text/css" href="../css/popup.css">
-
+	
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 	<style>
@@ -18,6 +19,8 @@
 </head>
 
 <body>
+
+	<script type="text/javascript" src="../js/myfbase.js"></script>
 	<div id="header">
 			<img id="growthlogo" src="../img/LogoMakr_1.png" />
 	</div>
@@ -124,23 +127,9 @@
 </body>
 
 
-
+<script src="../js/add-user.js"></script>
 <script type="text/javascript" src="../js/popup.js"></script>
 <script type="text/javascript" src="../js/tree.js"></script>
 <script type="text/javascript" src="../js/table.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-<script>
-	// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyCEyt_mqmUOPtDeQMwnsup8I_dKLHguXjM",
-		authDomain: "growth-983ed.firebaseapp.com",
-		databaseURL: "https://growth-983ed.firebaseio.com",
-		projectId: "growth-983ed",
-		storageBucket: "growth-983ed.appspot.com",
-		messagingSenderId: "376171377701"
-	};
-	firebase.initializeApp(config);
-</script>
 
 </html>
