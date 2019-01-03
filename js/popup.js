@@ -28,139 +28,139 @@ function closeBlur() {
 
 /*Reveals the add task page*/
 btn1.onclick = function () {
-	edupopup.style.visibility = "visible";
-	edupopup.style.opacity = "1";
-	openBlur();
+  edupopup.style.visibility = "visible";
+  edupopup.style.opacity = "1";
+  openBlur();
 }
 
 btn2.onclick = function () {
-	fitpopup.style.visibility = "visible";
-	fitpopup.style.opacity = "1";
-	openBlur();
+  fitpopup.style.visibility = "visible";
+  fitpopup.style.opacity = "1";
+  openBlur();
 }
 
 btn3.onclick = function () {
-	healthpopup.style.visibility = "visible";
-	healthpopup.style.opacity = "1";
-	openBlur();
-	
+  healthpopup.style.visibility = "visible";
+  healthpopup.style.opacity = "1";
+  openBlur();
+
 }
 
 /*Closes the task page*/
 eduspan.onclick = function () {
-	edupopup.style.opacity = "0";
-	edupopup.style.visibility = "hidden";
-	closeBlur();
+  edupopup.style.opacity = "0";
+  edupopup.style.visibility = "hidden";
+  closeBlur();
 }
 
 fitspan.onclick = function () {
-	fitpopup.style.opacity = "0";
-	fitpopup.style.visibility = "hidden";
-	closeBlur();
+  fitpopup.style.opacity = "0";
+  fitpopup.style.visibility = "hidden";
+  closeBlur();
 }
 
 healthspan.onclick = function () {
-	healthpopup.style.opacity = "0";
-	healthpopup.style.visibility = "hidden";
-	closeBlur();
+  healthpopup.style.opacity = "0";
+  healthpopup.style.visibility = "hidden";
+  closeBlur();
 }
 
 /*Closes the task page when submitting*/
 
 edusubmit.onclick = function () {
-	edupopup.style.opacity = "0";
-	edupopup.style.visibility = "hidden";
-	containerElement.setAttribute('class', null);
+  edupopup.style.opacity = "0";
+  edupopup.style.visibility = "hidden";
+  containerElement.setAttribute('class', null);
 
-	var eduEventName = $("#eduTask").val();
-	var eduDate = $("#eduDate").val();
-	var dateObj = new Date(eduDate);
-	var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
+  var eduEventName = $("#eduTask").val();
+  var eduDate = $("#eduDate").val();
+  var dateObj = new Date(eduDate);
+  var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
 
-	// userId firebase reference
-	var userId = firebase.auth().currentUser.uid;
-	var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
+  // userId firebase reference
+  var userId = firebase.auth().currentUser.uid;
+  var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
 
-	firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
-		"task": eduEventName,
-		"date": eduDate,
-		"type": "1",
-		"status": false,
-	})
+  firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
+    "task": eduEventName,
+    "date": eduDate,
+    "type": "1",
+    "status": false,
+  })
 
-	location.reload();
+  location.reload();
 }
 
 fitsubmit.onclick = function () {
-	fitpopup.style.opacity = "0";
-	fitpopup.style.visibility = "hidden";
-	containerElement.setAttribute('class', null);
+  fitpopup.style.opacity = "0";
+  fitpopup.style.visibility = "hidden";
+  containerElement.setAttribute('class', null);
 
-	var fitEventName = $("#fitTask").val();
-	var fitDate = $("#fitDate").val();
-	var dateObj = new Date(fitDate);
-	var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
+  var fitEventName = $("#fitTask").val();
+  var fitDate = $("#fitDate").val();
+  var dateObj = new Date(fitDate);
+  var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
 
-	// userId firebase reference
-	var userId = firebase.auth().currentUser.uid;
-	var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
+  // userId firebase reference
+  var userId = firebase.auth().currentUser.uid;
+  var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
 
-	firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
-		"task": fitEventName,
-		"date": fitDate,
-		"type": "2",
-		"status": false,
-	})
+  firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
+    "task": fitEventName,
+    "date": fitDate,
+    "type": "2",
+    "status": false,
+  })
 
-	location.reload();
+  location.reload();
 
 }
 
 healthsubmit.onclick = function () {
-	healthpopup.style.opacity = "0";
-	healthpopup.style.visibility = "hidden";
+  healthpopup.style.opacity = "0";
+  healthpopup.style.visibility = "hidden";
 
-	containerElement.setAttribute('class', null);
+  containerElement.setAttribute('class', null);
 
-	var healthEventName = $("#healthTask").val();
-	var healthDate = $("#healthDate").val();
-	var dateObj = new Date(healthDate);
-	var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
+  var healthEventName = $("#healthTask").val();
+  var healthDate = $("#healthDate").val();
+  var dateObj = new Date(healthDate);
+  var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
 
-	// userId firebase reference
-	var userId = firebase.auth().currentUser.uid;
-	var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
+  // userId firebase reference
+  var userId = firebase.auth().currentUser.uid;
+  var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
 
-	firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
-		"task": healthEventName,
-		"date": healthDate,
-		"type": "3",
-		"status": false,
-	})
+  firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
+    "task": healthEventName,
+    "date": healthDate,
+    "type": "3",
+    "status": false,
+  })
 
-	location.reload();
+  location.reload();
 
 }
 
 /*Closes the task page when clicking outside window*/
 document.onclick = function (event) {
-	if (event.target == edupopup) {
-		edupopup.style.opacity = "0";
-		edupopup.style.visibility = "hidden";
-		closeBlur();
-	}
+  if (event.target == edupopup) {
+    edupopup.style.opacity = "0";
+    edupopup.style.visibility = "hidden";
+    closeBlur();
+  }
 
-	if (event.target == fitpopup) {
-		fitpopup.style.opacity = "0";
-		fitpopup.style.visibility = "hidden";
-		closeBlur();
-	}
+  if (event.target == fitpopup) {
+    fitpopup.style.opacity = "0";
+    fitpopup.style.visibility = "hidden";
+    closeBlur();
+  }
 
-	if (event.target == healthpopup) {
-		healthpopup.style.opacity = "0";
-		healthpopup.style.visibility = "hidden";
-		closeBlur();
-	}
+  if (event.target == healthpopup) {
+    healthpopup.style.opacity = "0";
+    healthpopup.style.visibility = "hidden";
+    closeBlur();
+  }
 }
 
 document.getElementById("log-out").onclick = function () {
@@ -169,6 +169,6 @@ document.getElementById("log-out").onclick = function () {
   location.href = "./login.html";
 }
 
-document.getElementById("growthlogo").onclick = function(){
+document.getElementById("growthlogo").onclick = function () {
   location.reload();
 };

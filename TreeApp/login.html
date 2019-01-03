@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  
+
   <div id="particles-js"></div>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
@@ -26,19 +26,18 @@
           // User successfully signed in.
           // Return type determines whether we continue the redirect automatically
           // or whether we leave that to developer to handle.
-          firebase.auth().onAuthStateChanged(function(user){
-              if (firebase.auth().currentUser.metadata.creationTime 
-              == firebase.auth().currentUser.metadata.lastSignInTime) {
-                  firebase.database().ref("users/"+user.uid).update(
-                  {
-                   "name":user.displayName, 
-                   "email":user.email,
-                   "eduPoints":0,
-                   "fitPoints":0,
-                   "healthPoints":0
-                  });
-              }
-              
+          firebase.auth().onAuthStateChanged(function (user) {
+            if (firebase.auth().currentUser.metadata.creationTime ==
+              firebase.auth().currentUser.metadata.lastSignInTime) {
+              firebase.database().ref("users/" + user.uid).update({
+                "name": user.displayName,
+                "email": user.email,
+                "eduPoints": 0,
+                "fitPoints": 0,
+                "healthPoints": 0
+              });
+            }
+
           });
           return true;
         },
