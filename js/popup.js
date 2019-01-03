@@ -16,43 +16,53 @@ var eduspan = document.getElementById("closeeducation");
 var fitspan = document.getElementById("closefit");
 var healthspan = document.getElementById("closehealth");
 
+function openBlur() {
+  $("#content, #header, #footer").css("-webkit-animation", "image_blur 1s");
+  $("#content, #header, #footer").css("filter", "blur(15px)");
+}
+
+function closeBlur() {
+  $("#content, #header, #footer").css("-webkit-animation", "image_blur_reverse 1s");
+  $("#content, #header, #footer").css("filter", "blur(0px)");
+}
+
 /*Reveals the add task page*/
 btn1.onclick = function () {
 	edupopup.style.visibility = "visible";
 	edupopup.style.opacity = "1";
-
-	containerElement.setAttribute('class', 'blur');
+	openBlur();
 }
 
 btn2.onclick = function () {
 	fitpopup.style.visibility = "visible";
 	fitpopup.style.opacity = "1";
-	containerElement.setAttribute('class', 'blur');
+	openBlur();
 }
 
 btn3.onclick = function () {
 	healthpopup.style.visibility = "visible";
 	healthpopup.style.opacity = "1";
-	containerElement.setAttribute('class', 'blur');
+	openBlur();
+	
 }
 
 /*Closes the task page*/
 eduspan.onclick = function () {
 	edupopup.style.opacity = "0";
 	edupopup.style.visibility = "hidden";
-	containerElement.setAttribute('class', null);
+	closeBlur();
 }
 
 fitspan.onclick = function () {
 	fitpopup.style.opacity = "0";
 	fitpopup.style.visibility = "hidden";
-	containerElement.setAttribute('class', null);
+	closeBlur();
 }
 
 healthspan.onclick = function () {
 	healthpopup.style.opacity = "0";
 	healthpopup.style.visibility = "hidden";
-	containerElement.setAttribute('class', null);
+	closeBlur();
 }
 
 /*Closes the task page when submitting*/
@@ -131,29 +141,29 @@ healthsubmit.onclick = function () {
 	location.reload();
 
 }
+var completewindow = document.getElementById("completeTask");
 
 /*Closes the task page when clicking outside window*/
 document.onclick = function (event) {
 	if (event.target == edupopup) {
 		edupopup.style.opacity = "0";
 		edupopup.style.visibility = "hidden";
-		containerElement.setAttribute('class', null);
+		closeBlur();
 	}
 
 	if (event.target == fitpopup) {
 		fitpopup.style.opacity = "0";
 		fitpopup.style.visibility = "hidden";
-		containerElement.setAttribute('class', null);
+		closeBlur();
 	}
 
 	if (event.target == healthpopup) {
 		healthpopup.style.opacity = "0";
 		healthpopup.style.visibility = "hidden";
-		containerElement.setAttribute('class', null);
+		closeBlur();
 	}
 }
 
 document.getElementById("log-out").onclick = function () {
 	firebase.auth().signOut();
-	location.href = "./login.html";
-}
+	location.href = "./login.html"; }

@@ -16,20 +16,20 @@
 #educationPopup {
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 1000ms;
+	transition: all 1s;
 
 }
 
 #fitnessPopup {
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 1000ms;
+	transition: all 1s;
 }
 
 #healthPopup {
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 1000ms;
+	transition: all 1s;
 }
 
 .content {
