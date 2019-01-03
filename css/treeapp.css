@@ -11,10 +11,17 @@ body {
     font-family: 'Roboto', sans-serif;
 	text-align: center;
     font-family: 'AirbnbCerealApp-Bold';
+    color: white;
 }
 
 #header {
     height: 100px;
+}
+
+#log-out {
+    float: right;
+    font-size: 20pt;
+    margin: 20px;
 }
 
 #content {
@@ -25,14 +32,13 @@ body {
 }
 
 /* LOGO */
-
-
 #growthlogo {
   width: 20%;
   float: left;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-top: 10px;
+  filter: invert(100%);
 }
 
 /* MAIN BACKGROUND */
@@ -97,7 +103,7 @@ table{
 }
 
 thead{
-	color: black;
+	color: white;
 	background-color: rgba(95, 106, 96, 0.43);
 }
 /* BUTTONS */
@@ -162,7 +168,7 @@ footer {
 }
 
 a {
-  color: black;
+  color: white;
   padding: 10px;
 }
 

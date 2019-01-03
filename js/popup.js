@@ -129,3 +129,8 @@ window.onclick = function(event) {
 	  containerElement.setAttribute('class', null);
   }
 }
+
+document.getElementById("log-out").onclick = function () {
+  firebase.auth().signOut();
+  location.href = "./login.html";
+}
