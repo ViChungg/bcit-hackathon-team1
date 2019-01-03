@@ -9,26 +9,28 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/popup.css">
 	
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Roboto');
 	</style>
-	
+
 </head>
 
 <body>
-	<div id="header"></div>
+
+	<script type="text/javascript" src="../js/myfbase.js"></script>
+	<div id="header">
+			<img id="growthlogo" src="../img/LogoMakr_1.png" />
+	</div>
 
 	<div id="content">
 
 		<div id="main"></div>
 
 		<div id="nav">
-			<div id="logo">
-              <img id="growthlogo" src="../img/LogoMakr_1.png"/>
-            </div>
-			
+      <h2>Events</h2>
 			<button id="education" type="button" class="nav-buttons">Education</button>
 			<button id="fitness" type="button" class="nav-buttons">Fitness</button>
 			<button id="health" type="button" class="nav-buttons">Health</button>
@@ -63,7 +65,7 @@
 							<td>type</td>
 						</tr>
 
-						
+
 					</tbody>
 				</table>
 			</div>
@@ -71,77 +73,63 @@
 
 	</div>
 
-  <div id="educationPopup" class="popup">
+	<div id="educationPopup" class="popup">
 
 
-    <div class="content">
-      <span id=closeeducation class="close">x</span>
-      <h1>Education</h1>
-      <span class="close"></span>
-      <input type=text class="input" id="eduTask" name="task" placeholder="Task">
-      <br/>
-      <input type=date class="input" id="eduDate" name=dueDate placeholder="Due Date" value="2019-01-02">
-      <br/>
-      <input type=submit class="submitbutton" id="edusubmit" name="edusubmit">
-    </div>
-      
-  </div>
-  
-  <div id="fitnessPopup" class="popup">
+		<div class="content">
+			<span id=closeeducation class="close">x</span>
+			<h1>Education</h1>
+			<span class="close"></span>
+			<input type=text class="input" id="eduTask" name="task" placeholder="Task">
+			<br />
+			<input type=date class="input" id="eduDate" name=dueDate placeholder="Due Date" value="2019-01-02">
+			<br />
+			<input type=submit class="submitbutton" id="edusubmit" name="edusubmit">
+		</div>
 
-  <div class="content">
-    <span id=closefit class="close">x</span>
-    <h1>Fitness</h1>
-    <input type=text class="input" id="fitTask" name=task placeholder="Task">
-    <br/>
-    <input type=date class="input" id="fitDate" name=dueDate value="2019-01-02">
-    <br/>
-    <input type=submit class="submitbutton" id="fitsubmit" name="fitsubmit">
-  </div>
+	</div>
 
-  </div>
-  
-  <div id="healthPopup" class="popup">
+	<div id="fitnessPopup" class="popup">
 
-    <div class="content">
-      <span id=closehealth class="close">x</span>
-      <h1>Health</h1>
-      <input type=text class="input" id="healthTask" name=task placeholder="Task">
-      <br/>
-      <input type=date class="input" id="healthDate" name=dueDate value="2019-01-02">
-      <br/>
-      <input type=submit class="submitbutton" id="healthsubmit" name="healthsubmit">
-    </div>
+		<div class="content">
+			<span id=closefit class="close">x</span>
+			<h1>Fitness</h1>
+			<input type=text class="input" id="fitTask" name=task placeholder="Task">
+			<br />
+			<input type=date class="input" id="fitDate" name=dueDate value="2019-01-02">
+			<br />
+			<input type=submit class="submitbutton" id="fitsubmit" name="fitsubmit">
+		</div>
 
-  </div>
-  
-  <footer>
-    (C)2019 BCIT Hackathon Team 1 | 
-    <a href=#> About </a>|
-    <a href=#> Help </a>|
-    <a href=#> Contact </a>
-  </footer>
-  
+	</div>
+
+	<div id="healthPopup" class="popup">
+
+		<div class="content">
+			<span id=closehealth class="close">x</span>
+			<h1>Health</h1>
+			<input type=text class="input" id="healthTask" name=task placeholder="Task">
+			<br />
+			<input type=date class="input" id="healthDate" name=dueDate value="2019-01-02">
+			<br />
+			<input type=submit class="submitbutton" id="healthsubmit" name="healthsubmit">
+		</div>
+
+	</div>
+
+	<footer>
+		(C) 2019 BCIT Hackathon Team 1 |
+		<a href=#> About </a>|
+		<a href=#> Help </a>|
+		<a href=#> Contact </a>
+	</footer>
+
 </body>
 
 
-
+<script src="../js/add-user.js"></script>
 <script type="text/javascript" src="../js/popup.js"></script>
 <script type="text/javascript" src="../js/tree.js"></script>
 <script type="text/javascript" src="../js/table.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCEyt_mqmUOPtDeQMwnsup8I_dKLHguXjM",
-    authDomain: "growth-983ed.firebaseapp.com",
-    databaseURL: "https://growth-983ed.firebaseio.com",
-    projectId: "growth-983ed",
-    storageBucket: "growth-983ed.appspot.com",
-    messagingSenderId: "376171377701"
-  };
-  firebase.initializeApp(config);
-</script>
 
 </html>
