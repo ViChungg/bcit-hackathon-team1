@@ -11,6 +11,8 @@ $(document).ready(function () {
     //MONTHS ARRAY
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
+    
+
     //TAKES USER ID FROM FIREBASE AUTHENTICATION
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -29,14 +31,15 @@ $(document).ready(function () {
             query.once("value").then(function (snapshot) {
 
                 snapshot.forEach(function (childSnapshot) {
+                    var trkey = childSnapshot.key;
 
                     var task = childSnapshot.child("task").val();
                     var dueDate = childSnapshot.child("date").val();
 
                     var date = new Date(dueDate);
                     var month = months[date.getMonth()];
+                    var day = date.getDate();
 
-                    var day = date.getDay();
                     dueDate = month + " " + day;
 
                     var type = childSnapshot.child("type").val();
@@ -44,7 +47,7 @@ $(document).ready(function () {
 
                     
                     if (status == false) {
-                        appendRow(task, dueDate, type);
+                        appendRow(task, dueDate, type, trkey);
                     }
 
                 });
@@ -53,13 +56,14 @@ $(document).ready(function () {
         }
     });
 
-    function appendRow(val1, val2, val3) {
+    function appendRow(val1, val2, val3, val4) {
         let task = val1;
         let date = val2;
         let type = val3;
+        let trkey = val4;
 
         /* TABLE ROW */
-        let tr = $("<tr></tr>");
+        let tr = $("<tr id='" + trkey + "'></tr>");
         $("tbody").append(tr);
 
         /* TABLE DATA 1 */
@@ -85,9 +89,24 @@ $(document).ready(function () {
         } else if (type == 3) {
             iconPath = "../icons/health.png";
         }
-
         img.attr("src", iconPath);
 
         tr.append(td1, td2, td3);
     }
+
+    $("tbody").on('click', 'tr', function() {
+        var trID = $(this).attr('id');
+        $('.completeTask').css("display", "block");
+
+        $("#complete-button").click(function() {
+            var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref("users/" + userId + "/tasks/" + trID).update({
+                "status": true,
+            })
+            $('.completeTask').css("display", "none");
+        })
+
+    });
+
+
 });
