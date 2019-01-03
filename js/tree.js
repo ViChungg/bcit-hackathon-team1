@@ -11,11 +11,11 @@ eduLeaves.src = '../img/eduleaves.png'
 
 /* Fitness Leaves */
 var fitLeaves = new Image();
-fitLeaves.src = '../img/leaves.svg';
+fitLeaves.src = '../img/fitnessleaves.png';
 
 /* Health leaves */
 var healthLeaves = new Image();
-healthLeaves.src = '../img/fitnessleaves.png';
+healthLeaves.src = '../img/leaves.svg';
 
 firebase.auth().onAuthStateChanged(function (user) {
 	var eduRef = firebase.database().ref('users/' + user.uid + '/eduPoints');
