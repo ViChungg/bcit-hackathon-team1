@@ -40,6 +40,7 @@ $(document).ready(function () {
                     var month = months[date.getMonth()];
                     var day = date.getDate();
 
+                    var day = date.getDate() + 1;
                     dueDate = month + " " + day;
 
                     var type = childSnapshot.child("type").val();
@@ -96,14 +97,22 @@ $(document).ready(function () {
 
     $("tbody").on('click', 'tr', function() {
         var trID = $(this).attr('id');
+
         $('.completeTask').css("display", "block");
 
         $("#complete-button").click(function() {
             var userId = firebase.auth().currentUser.uid;
-            firebase.database().ref("users/" + userId + "/tasks/" + trID).update({
+            var taskRef = firebase.database().ref("users/" + userId + "/tasks/" + trID);
+            taskRef.update({
                 "status": true,
             })
             $('.completeTask').css("display", "none");
+
+            taskRef.once("value").then(function (snapshot) {
+                var typePoints = snapshot.child("type").val();
+            })
+
+            location.reload();
         })
 
     });
