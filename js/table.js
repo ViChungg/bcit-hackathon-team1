@@ -190,11 +190,13 @@ $(document).ready(function () {
 $(document).ready(function () {
     function checkItems() {
         if (!document.getElementById("table-body").hasChildNodes()) {
-            console.log("hello");
+            console.log(document.getElementById("table-body").firstChild);
             $("#noItems").css("display", "block");
-        } else if (document.getElementById("table-body").hasChildNodes()) {
-            console.log("good");
-            $("#noItems").css("display", "none");
+            $("#table").css("display", "none");
+//        } else if (document.getElementById("table-body").hasChildNodes()) {
+  //          console.log("good");
+    //        console.log(document.getElementById("table-body").firstChild);
+      //      $("#noItems").css("display", "none");
         }
     }
     checkItems();
