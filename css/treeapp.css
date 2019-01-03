@@ -28,6 +28,7 @@ body {
 
 #growthlogo {
   width: 90%;
+  padding-top: 20px;
 }
 
 /* MAIN BACKGROUND */
@@ -135,7 +136,7 @@ button:hover {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 30%;
 }
 
