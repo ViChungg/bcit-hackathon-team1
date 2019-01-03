@@ -132,7 +132,6 @@ healthsubmit.onclick = function() {
   location.reload();
 
 }
-var completewindow = document.getElementById("completeTask");
 
 /*Closes the task page when clicking outside window*/
 document.onclick = function(event) {
@@ -157,3 +156,7 @@ document.getElementById("log-out").onclick = function () {
   firebase.auth().signOut();
   location.href = "./login.html";
 }
+
+document.getElementById("growthlogo").onclick = function(){
+  location.reload();
+};
