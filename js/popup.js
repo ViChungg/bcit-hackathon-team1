@@ -57,18 +57,21 @@ edusubmit.onclick = function() {
   
   var eduEventName = $("#eduTask").val();
   var eduDate = $("#eduDate").val();
+  var dateObj = new Date(eduDate);
+  var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
   
   // userId firebase reference
   var userId = firebase.auth().currentUser.uid;
-  firebase.database().ref("users/" + userId + "/tasks").push({
+  var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
+
+  firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
     "task": eduEventName,
     "date": eduDate,
     "type": "1",
     "status": false,
-  });
+  })
 
   location.reload();
-
 }
 
 fitsubmit.onclick = function() {
@@ -77,15 +80,20 @@ fitsubmit.onclick = function() {
 
   var fitEventName = $("#fitTask").val();
   var fitDate = $("#fitDate").val();
-
+  var dateObj = new Date(fitDate);
+  var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
+  
+  // userId firebase reference
   var userId = firebase.auth().currentUser.uid;
-  firebase.database().ref("users/" + userId + "/tasks").push({
+  var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
+
+  firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
     "task": fitEventName,
     "date": fitDate,
     "type": "2",
     "status": false,
-  });
-
+  })
+  
   location.reload();
 
 }
@@ -97,15 +105,20 @@ healthsubmit.onclick = function() {
 
   var healthEventName = $("#healthTask").val();
   var healthDate = $("#healthDate").val();
+  var dateObj = new Date(healthDate);
+  var dateNum = dateObj.toISOString().substring(0, 10).replace(/-/g, "");
   
+  // userId firebase reference
   var userId = firebase.auth().currentUser.uid;
-  firebase.database().ref("users/" + userId + "/tasks").push({
+  var newPostKey = dateNum + firebase.database().ref().child('tasks').push().key;
+
+  firebase.database().ref("users/" + userId + "/tasks/" + newPostKey).update({
     "task": healthEventName,
     "date": healthDate,
     "type": "3",
     "status": false,
-  });
-
+  })
+  
   location.reload();
 
 }
@@ -132,4 +145,3 @@ document.getElementById("log-out").onclick = function () {
   firebase.auth().signOut();
   location.href = "./login.html";
 }
-
