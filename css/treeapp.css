@@ -96,7 +96,7 @@ h2 {
 
 /* POINTS */
 #counter {
-    display: flex;
+    display: none;
     justify-content: space-around;
 }
 
