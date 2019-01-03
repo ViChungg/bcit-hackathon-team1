@@ -142,9 +142,10 @@ button {
 }
 
 .addicon {
-  width: 20px;
+  width: 15px;
   float: right;
-  padding-right: 10px;  
+  padding-right: 10px;
+  padding-top: 5px;
 }
 
 button:hover {
@@ -163,7 +164,6 @@ button:hover {
 
 #health:hover {
   background-color: rgb(193, 66, 66);
->>>>>>> 87e454effa4f149e1b52a690a5e8d17943990f2a
 	-webkit-transition: background-color 0.5s;
 }
 
