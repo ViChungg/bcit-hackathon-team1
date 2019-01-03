@@ -34,6 +34,7 @@ body {
 	display: flex;
 	justify-content: center;
     flex-wrap: wrap;
+	margin-bottom: 15px;
 }
 
 /* LOGO */
@@ -68,6 +69,8 @@ body {
     width: 20%;
 	min-width: 150px;
     text-align: center;
+	position: relative;
+	top: 25px;
     /*CHANGE FOR RESLOUTION OF SCREEN*/
 }
 
@@ -126,7 +129,7 @@ thead{
 	font-weight: 800;
 	border: none;
 
-	background-color: rgba(95, 106, 96, 0.43);
+	background-color: rgba(137, 141, 141, 0.56);
 }
 /* BUTTONS */
 
@@ -136,9 +139,9 @@ button {
 	border-radius: 4px;
 	background-color: rgba(255, 255, 255, 0);
 	border: 0.5px solid white;
-	margin: white;
 	cursor: pointer;
 	font-size: 140%;
+	margin: 10px;
 }
 
 #education:hover {
@@ -159,21 +162,22 @@ button {
 #education {
     width: 90%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
     margin-top: 10px;
+	
 }
 
 #fitness {
     width: 90%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
 }
 
 
 #health {
     width: 90%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
 }
 
 .nav-buttons {
@@ -212,9 +216,13 @@ button {
 	filter: blur(5px);}
 
 footer {
-  position: absolute;
-  bottom: 10px;
-  left: 30%;
+	font-size: 12pt;
+	font-family: 'calibri', sans-serif;
+  position: relative;
+  bottom: px;
+  text-align: center;
+	background-color: rgba(0, 0, 0, 0.43);
+	border-radius: 5px;
 }
 
 a {
