@@ -14,16 +14,22 @@
 }
 
 #educationPopup {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
 
 }
 
 #fitnessPopup {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
 }
 
 #healthPopup {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
 }
 
 .content {
