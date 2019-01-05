@@ -363,15 +363,15 @@ tbody > tr:hover {
 }
 
 #eduPoints {
-	color: yellow;
+	color: #eded30;
 }
 
 #fitPoints {
-	color: red;
+	color: #d83333;
 }
 
 #healthPoints {
-	color: green;
+	color: #26d440;
 }
 
 .points {

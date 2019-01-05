@@ -2,66 +2,69 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>Growth App</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Growth App</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 </head>
 
 <body>
 
-  <div id="particles-js"></div>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
-  <script src="../js/myfbase.js"></script>
-  <script src="../js/add-user.js"></script>
+	<div id="particles-js"></div>
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script src="../js/myfbase.js"></script>
+	<script src="../js/add-user.js"></script>
+	<script src="../js/table.js"></script>
 
-  <script type="text/javascript">
-    var uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-          // User successfully signed in.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-            if (firebase.auth().currentUser.metadata.creationTime == firebase.auth().currentUser.metadata.lastSignInTime) {
-              newUserDatabase();
-            }
+	<script type="text/javascript">
+		var uiConfig = {
+			callbacks: {
+				signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+					// User successfully signed in.
+					// Return type determines whether we continue the redirect automatically
+					// or whether we leave that to developer to handle.
+					if (firebase.auth().currentUser.metadata.creationTime == firebase.auth().currentUser.metadata.lastSignInTime) {
+						
+						newUserDatabase();
+					}
 
-          return true;
-        },
-        uiShown: function () {
-          // The widget is rendered.
-          // Hide the loader.
-          document.getElementById('loader').style.display = 'none';
-        }
-      },
-      // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-      signInFlow: 'popup',
-      signInSuccessUrl: './Index.html',
-      signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        firebase.auth.EmailAuthProvider.PROVIDER_ID
-      ],
-      // Terms of service url.
-      tosUrl: '<your-tos-url>',
-      // Privacy policy url.
-      privacyPolicyUrl: '<your-privacy-policy-url>'
-    };
-    // Initialize the FirebaseUI Widget using Firebase.
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    // The start method will wait until the DOM is loaded.
-    ui.start('#firebaseui-auth-container', uiConfig);
-  </script>
+					return true;
+				},
+				uiShown: function() {
+					// The widget is rendered.
+					// Hide the loader.
+					document.getElementById('loader').style.display = 'none';
+				}
+			},
+			// Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+			signInFlow: 'popup',
+			signInSuccessUrl: './Index.html',
+			signInOptions: [
+				// Leave the lines as is for the providers you want to offer your users.
+				firebase.auth.EmailAuthProvider.PROVIDER_ID
+			],
+			// Terms of service url.
+			tosUrl: '<your-tos-url>',
+			// Privacy policy url.
+			privacyPolicyUrl: '<your-privacy-policy-url>'
+		};
+		// Initialize the FirebaseUI Widget using Firebase.
+		var ui = new firebaseui.auth.AuthUI(firebase.auth());
+		// The start method will wait until the DOM is loaded.
+		ui.start('#firebaseui-auth-container', uiConfig);
 
-  <div class="title">
-    <img id="growthlogo" src="../img/LogoMakr_1.png" />
-  </div>
-  <div id="firebaseui-auth-container"></div>
-  <div id="loader">Planting seeds...</div>
+	</script>
+
+	<div class="title">
+		<img id="growthlogo" src="../img/LogoMakr_1.png" />
+	</div>
+	<div id="firebaseui-auth-container"></div>
+	<div id="loader">Planting seeds...</div>
 
 </body>
 
