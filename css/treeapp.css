@@ -260,8 +260,9 @@ button:hover {
 footer {
     font-size: 12pt;
     font-family: 'calibri', sans-serif;
-    position: relative;
-    bottom: -40px;
+    position: absolute;
+    bottom: 50px;
+    left: 30%;
     text-align: center;
     background-color: rgba(121, 121, 121, 0.43);
     border-radius: 5px;
@@ -328,8 +329,6 @@ tbody>tr:hover {
     background-color: orangered;
 }
 
-<<<<<<< HEAD=======
-
 /* Image blur CSS, used in js file */
 @-webkit-keyframes image_blur {
     0% {
@@ -355,7 +354,7 @@ tbody>tr:hover {
 #counter {
     display: none;
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 35%;
     margin: 0 auto;
     z-index: 100;
@@ -366,11 +365,11 @@ tbody>tr:hover {
 }
 
 #fitPoints {
-  color: green;
+  color: red;
 }
 
 #healthPoints {
-  color: red;
+  color: green;
 }
 
 .points {
@@ -379,6 +378,6 @@ tbody>tr:hover {
   height: 1.5em;
   width: 7vw;
   display: inline-block;
-  font-size: 24pt;
+  font-size: 40pt;
 }
 

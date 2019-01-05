@@ -54,6 +54,8 @@ $(document).ready(function () {
 
             });
         }
+
+
     });
 
     function appendRow(val1, val2, val3, val4) {
@@ -187,19 +189,17 @@ $(document).ready(function () {
 
 });
 
-$(document).ready(function () {
-    function checkItems() {
-        if (!document.getElementById("table-body").hasChildNodes()) {
-            console.log(document.getElementById("table-body").firstChild);
+$(document).ready(function(){
+    setTimeout(function() {
+        if ($("#table-body tr").length == 0) {
+            console.log("No nodes");
             $("#noItems").css("display", "block");
-            $("#table").css("display", "none");
-//        } else if (document.getElementById("table-body").hasChildNodes()) {
-  //          console.log("good");
-    //        console.log(document.getElementById("table-body").firstChild);
-      //      $("#noItems").css("display", "none");
+        } else if ($("#table-body tr").length > 0) {
+            console.log("Has nodes");
+            $("#noItems").css("display", "none");
         }
-    }
-    checkItems();
+    }, 710)
+    console.log($("#table-body tr").length == 0);
 });
 
 $(document).mouseup(function (event) {
