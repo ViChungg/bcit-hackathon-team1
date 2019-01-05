@@ -180,9 +180,9 @@ tree.addEventListener("mouseover", mouseOver);
 tree.addEventListener("mouseout", mouseOut);
 
 function mouseOver() {
-  counter.style.display = "block";
+  counter.style.visibility = "visible";
 }
 
 function mouseOut(){
-  counter.style.display = "none";
+  counter.style.visibility = "hidden";
 }

@@ -29,6 +29,7 @@
 		$(function() {
 			$('body').removeClass('fade-out');
 		});
+
 	</script>
 
 	<!--link to script document for rest of JS-->
@@ -69,28 +70,15 @@
 		<!-- tree -->
 		<div id="tree">
 			<canvas id="myTree" width="600" height="600"></canvas>
-		</div>
 
-		<!-- tree score -->
-		<div id="counter">
+			<!-- tree score -->
+			<div id="counter">
 
-			<div id="eduPoints" class="points">
-				0
+				<div id="eduPoints" class="points">0</div>
+				<div id="fitPoints" class="points">0</div>
+				<div id="healthPoints" class="points">0</div>
 			</div>
-			<div id="fitPoints" class="points">
-				0
-			</div>
-			<div id="healthPoints" class="points">
-				0
-			</div>
-		</div>
-
-		<!-- tree score -->
-		<div id="counter">
-
-			<div id="eduPoints" class="points">0</div>
-			<div id="fitPoints" class="points">0</div>
-			<div id="healthPoints" class="points">0</div>
+			
 		</div>
 
 		<!-- table with all tasks shown-->
@@ -156,15 +144,20 @@
 			<input type=submit class="submitbutton" id="healthsubmit" name="healthsubmit">
 		</div>
 
+
+	</div>
+	
+	<div id="footer">
+		<!--Footer with about, help, and contact links-->
+		<footer>
+			<a href=#>2019 BCIT Hackathon Team 1</a>
+			<a href=#> About </a>
+			<a href=#> Help </a>
+			<a href=#> Contact </a>
+		</footer>
 	</div>
 
-	<!--Footer with about, help, and contact links-->
-	<footer>
-		2019 BCIT Hackathon Team 1 |
-		<a href=#> About </a>|
-		<a href=#> Help </a>|
-		<a href=#> Contact </a>
-	</footer>
+
 
 </body>
 

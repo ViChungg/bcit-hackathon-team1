@@ -1,240 +1,236 @@
 @font-face {
-    font-family: 'AirbnbCerealApp-Bold';
-    src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+	font-family: 'AirbnbCerealApp-Bold';
+	src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
 }
 
 /* CSS for our app */
 body {
-    background-image: url("../img/background-darkblue.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-family: 'AirbnbCerealApp-Bold';
-    color: white;
-    opacity: 1;
-    transition: 1s opacity;
+	background-image: url("../img/background-darkblue.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-family: 'AirbnbCerealApp-Bold';
+	color: white;
+	opacity: 1;
+	transition: 1s opacity;
 }
 
 body.fade-out {
-    opacity: 0;
-    transition: none;
+	opacity: 0;
+	transition: none;
 }
 
 h2 {
-    font-family: 'AirbnbCerealApp-Bold';
+	font-family: 'AirbnbCerealApp-Bold';
 }
 
 #header {
-    height: 100px;
+	height: 100px;
 }
 
 #log-out {
-    float: right;
-    font-size: 18pt;
-    padding: 8px;
-    margin: 20px;
+	float: right;
+	font-size: 18pt;
+	padding: 8px;
+	margin: 20px;
 }
 
 #log-out:hover {
-    transform: scale(1.05);
-    -webkit-transition: transform 0.5s;
+	transform: scale(1.05);
+	-webkit-transition: transform 0.5s;
 
 
 }
 
 #content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
 }
 
 /* LOGO */
 #growthlogo {
 
-    width: 90%;
-    padding-top: 20px;
-    width: 20%;
-    float: left;
-    padding-bottom: 0px;
-    padding-left: 20px;
-    padding-top: 10px;
+	width: 90%;
+	padding-top: 20px;
+	width: 20%;
+	float: left;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	padding-top: 10px;
 
-    filter: invert(100%);
+	filter: invert(100%);
 }
 
 #growthlogo:hover {
-    transform: scale(1.1);
-    -webkit-transition: transform 0.5s;
+	transform: scale(1.1);
+	-webkit-transition: transform 0.5s;
 
 
 }
 
 /* MAIN BACKGROUND */
 #main {
-    background-color: yellow;
+	background-color: yellow;
 }
 
 /* NAV BAR */
 #nav {
-    /* background-color: blue; */
-    width: 20%;
-    min-width: 150px;
-    text-align: center;
-    position: relative;
-    /*CHANGE FOR RESLOUTION OF SCREEN*/
+	/* background-color: blue; */
+	width: 20%;
+	min-width: 150px;
+	text-align: center;
+	position: relative;
+	/*CHANGE FOR RESLOUTION OF SCREEN*/
 }
 
 /* CENTER TREE */
 #tree {
-    /* background-color: red; */
-    width: 45%;
-    min-width: 300px;
-    display: inline-block;
-    text-align: center;
+	/* background-color: red; */
+	width: 45%;
+	min-width: 300px;
+	display: inline-block;
+	text-align: center;
 }
 
 #myTree:hover {
-	transform: scale(1.1) translate(0px, -25px); 
-    transition: all 1s;
-	
+	transform: scale(1.1) translate(0px, -25px);
+	transition: all 1s;
+
 }
 
 #myTree {
-    margin: 0;
-    background-color: transparent;
-    width: 80%;
+	margin: 0;
+	background-color: transparent;
+	width: 80%;
 }
 
 /* POINTS */
-#counter {
-    display: none;
-    justify-content: space-around;
-}
 
 .points {
-    background-color: none;
-    padding: 20px 0 0 0;
-    height: 6vw;
-    width: 7vw;
-    display: inline-block;
-    font-size: 3vw;
+	background-color: none;
+	padding: 20px 0 0 0;
+	height: 6vw;
+	width: 7vw;
+	display: inline-block;
+	font-size: 3vw;
 }
 
 /* TO-DO LIST */
 #task {
-    /* background-color: green; */
-    width: 30%;
-    min-width: 186px;
-    /* border: 0.5px solid white;
+	/* background-color: green; */
+	width: 30%;
+	min-width: 186px;
+	/* border: 0.5px solid white;
 	border-radius: 4px; */
 }
 
 #table-wrapper {
-    position: relative;
-    overflow: auto;
-    height: 88%;
-    margin-left: 20px;
-    margin-right: 20px;
+	position: relative;
+	overflow: auto;
+	height: 88%;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 table {
-    margin: auto;
-    background-color: rgba(137, 141, 141, 0.56);
-    border-collapse: collapse;
-    border: none;
-    width: 90%;
-    font-family: 'AirbnbCerealApp-Bold';
+	margin: auto;
+	background-color: rgba(137, 141, 141, 0.56);
+	border-collapse: collapse;
+	border: none;
+	width: 90%;
+	font-family: 'AirbnbCerealApp-Bold';
 
-    border-radius: 6px;
-    -moz-border-radius: 6px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 
 thead {
-    color: white;
-    font-weight: 800;
-    border: none;
-    background-color: rgba(0, 70, 6, 0.43);
-    border-radius: 4px;
+	color: white;
+	font-weight: 800;
+	border: none;
+	background-color: rgba(0, 70, 6, 0.43);
+	border-radius: 4px;
 }
 
 /* BUTTONS */
 
 button {
-    color: white;
-    font-family: 'Abel', sans-serif;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0);
-    border: 0.5px solid white;
-    cursor: pointer;
-    font-size: 140%;
-    margin: 10px;
+	color: white;
+	font-family: 'Abel', sans-serif;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0);
+	border: 0.5px solid white;
+	cursor: pointer;
+	font-size: 140%;
+	margin: 10px;
 }
 
 .addicon {
-    width: 15px;
-    float: right;
-    padding-right: 10px;
-    padding-top: 5px;
+	width: 15px;
+	float: right;
+	padding-right: 10px;
+	padding-top: 5px;
 }
 
 button:hover {
-    background-color: rgba(45, 47, 45, 0.49);
-    /* Green */
+	background-color: rgba(45, 47, 45, 0.49);
+	/* Green */
 }
 
 #education:hover {
-    background-color: #baba30;
-    -webkit-transition: background-color 0.5s;
+	background-color: #baba30;
+	-webkit-transition: background-color 0.5s;
 }
 
 #fitness:hover {
-    background-color: rgb(193, 66, 66);
-    -webkit-transition: background-color 0.5s;
+	background-color: rgb(193, 66, 66);
+	-webkit-transition: background-color 0.5s;
 }
 
 #health:hover {
-    background-color: #05a205;
-    -webkit-transition: background-color 0.5s;
+	background-color: #05a205;
+	-webkit-transition: background-color 0.5s;
 }
 
 #education {
-    width: 90%;
-    height: 60px;
-    margin-bottom: 10%;
-    margin-top: 10px;
+	width: 90%;
+	height: 60px;
+	margin-bottom: 10%;
+	margin-top: 10px;
 
 }
 
 #fitness {
-    width: 90%;
-    height: 60px;
-    margin-bottom: 10%;
+	width: 90%;
+	height: 60px;
+	margin-bottom: 10%;
 }
 
 
 #health {
-    width: 90%;
-    height: 60px;
-    margin-bottom: 10%;
+	width: 90%;
+	height: 60px;
+	margin-bottom: 10%;
 }
 
 .nav-buttons {
-    background-color: none;
-    text-decoration: none;
+	background-color: none;
+	text-decoration: none;
 }
 
 .td-task {
-    width: 60%;
+	width: 60%;
 }
 
 .td-date {
-    width: 35%;
+	width: 35%;
 }
 
 .td-type {
-    width: 15%;
+	width: 15%;
 }
 
 /*
@@ -254,130 +250,135 @@ button:hover {
 }
 */
 .blur {
-    filter: blur(5px);
+	filter: blur(5px);
 }
 
 footer {
-    font-size: 12pt;
-    font-family: 'calibri', sans-serif;
-    position: absolute;
-    bottom: 50px;
-    left: 30%;
-    text-align: center;
-    background-color: rgba(121, 121, 121, 0.43);
-    border-radius: 5px;
+	font-size: 12pt;
+	font-family: 'calibri', sans-serif;
+	position: relative;
+	display: flex;
+
+	bottom: 0px;
+	justify-content: space-around;
+	background-color: rgba(121, 121, 121, 0.43);
+	border-radius: 20px;
+}
+
+#footer {
+	width: 70%;
+	margin: 0 auto;
 }
 
 a {
-    color: white;
-    padding: 10px;
+	color: white;
+	padding: 2px;
 }
 
 a:hover {
-    color: #4CAF50;
-    cursor: pointer;
+	color: #4CAF50;
+	cursor: pointer;
 }
 
-tbody>tr:hover {
-    color: white;
-    background-color: rgb(3, 145, 74);
-    cursor: pointer;
+tbody > tr:hover {
+	color: white;
+	background-color: rgb(3, 145, 74);
+	cursor: pointer;
 }
 
 /* scroll bar */
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(135, 181, 235, 0);
+	background: rgba(135, 181, 235, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.64);
-    border-radius: 10px;
+	background: rgba(255, 255, 255, 0.64);
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #8b8686;
+	background: #8b8686;
 }
 
 /* task completion*/
 .completeTask {
-    display: none;
-    /* margin: 0 auto;
+	display: none;
+	/* margin: 0 auto;
     margin-top: 200px; */
-    background-color: rgb(166, 204, 255);
-    height: auto;
-    /* width: 16%;
+	background-color: rgb(166, 204, 255);
+	height: auto;
+	/* width: 16%;
     margin-left: 42%; */
-    position: absolute;
-    border-radius: 5px;
-    z-index: 1;
+	position: absolute;
+	border-radius: 5px;
+	z-index: 1;
 }
 
 #complete-button {
-    margin-right: 5px;
-    color: white;
-    background-color: yellowgreen;
+	margin-right: 5px;
+	color: white;
+	background-color: yellowgreen;
 }
 
 #remove-button {
-    margin-left: 5px;
-    color: white;
-    background-color: orangered;
+	margin-left: 5px;
+	color: white;
+	background-color: orangered;
 }
 
 /* Image blur CSS, used in js file */
 @-webkit-keyframes image_blur {
-    0% {
-        -webkit-filter: blur(0px);
-    }
+	0% {
+		-webkit-filter: blur(0px);
+	}
 
-    100% {
-        -webkit-filter: blur(15px);
-    }
+	100% {
+		-webkit-filter: blur(15px);
+	}
 }
 
 @-webkit-keyframes image_blur_reverse {
-    0% {
-        -webkit-filter: blur(15px);
-    }
+	0% {
+		-webkit-filter: blur(15px);
+	}
 
-    100% {
-        -webkit-filter: blur(0px);
-    }
+	100% {
+		-webkit-filter: blur(0px);
+	}
 }
 
 /* POINTS */
 #counter {
-    display: none;
-    position: absolute;
-    bottom: 100px;
-    left: 35%;
-    margin: 0 auto;
-    z-index: 100;
+	justify-content: space-around;
+	visibility: hidden;
+	position: relative;
+	margin: 0 auto;
+	//bottom: 40px;
+	z-index: 100;
 }
 
 #eduPoints {
-  color: yellow;
+	color: yellow;
 }
 
 #fitPoints {
-  color: red;
+	color: red;
 }
 
 #healthPoints {
-  color: green;
+	color: green;
 }
 
 .points {
-/*  background-color: rgba(52, 90, 71, 0.83);*/
-  padding-top: 35px;
-  height: 1.5em;
-  width: 7vw;
-  display: inline-block;
-  font-size: 40pt;
+	/*  background-color: rgba(52, 90, 71, 0.83);*/
+	height: 1.5em;
+	width: 7vw;
+	padding: 2vw;
+	display: inline-block;
+	font-size: 3em;
 }
-
