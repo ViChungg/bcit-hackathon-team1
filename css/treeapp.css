@@ -95,6 +95,12 @@ h2 {
     text-align: center;
 }
 
+#myTree:hover {
+	transform: scale(1.1) translate(0px, -25px); 
+    transition: all 1s;
+	
+}
+
 #myTree {
     margin: 0;
     background-color: transparent;
